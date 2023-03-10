@@ -69,7 +69,6 @@ class ContactsViewController: UIViewController {
 
         switch CNContactStore.authorizationStatus(for: .contacts) {
         case .denied, .notDetermined:
-
             contactStore.requestAccess(for: .contacts, completionHandler: { access, error in
 
                 if access {
