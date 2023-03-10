@@ -10,6 +10,8 @@ import Contacts
 
 class ContactsViewController: UIViewController {
     
+    lazy var viewModel = ContactsViewModel()
+    
     static func newInstance() -> ContactsViewController {
         let viewController = buildFromStoryboard("Contacts") as ContactsViewController
         return viewController
@@ -68,25 +70,32 @@ class ContactsViewController: UIViewController {
         let contactStore = CNContactStore()
 
         switch CNContactStore.authorizationStatus(for: .contacts) {
-        case .denied, .notDetermined:
+        case .notDetermined:
             contactStore.requestAccess(for: .contacts, completionHandler: { access, error in
-
                 if access {
-                    print("super")
+                    self.viewModel.getContacts()
                 } else {
-                    print("problem")
+                    self.handleError()
                 }
             })
         case .authorized:
-            print("ok")
+            viewModel.getContacts()
         case .restricted:
-            print("restricted")
-//        case .notDetermined:
-//            <#code#>
-//        case .denied:
-//            <#code#>
+            manualPermissionInstuctions()
+        case .denied:
+            manualPermissionInstuctions()
         @unknown default:
-            print("default")
+            handleError()
         }
+    }
+    
+    // TODO: implement
+    private func handleError() {
+        print("handle error")
+    }
+    
+    // TODO: implement
+    private func manualPermissionInstuctions() {
+        print("manual permissions")
     }
 }

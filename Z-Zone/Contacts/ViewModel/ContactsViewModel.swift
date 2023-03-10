@@ -24,4 +24,9 @@ class ContactsViewModel {
         CNContactThumbnailImageDataKey] as [Any]
     
     
+    func getContacts() {
+        print("ML: get contacts")
+    }
+    
+    
 }
