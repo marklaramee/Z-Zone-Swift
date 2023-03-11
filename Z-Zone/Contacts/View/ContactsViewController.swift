@@ -12,8 +12,10 @@ import RxSwift
 class ContactsViewController: UIViewController {
     
     let viewModel = ContactsViewModel(client: ContactsClient.shared)
-    var contacts: [CNContact] = []
+    var contacts: [ContactModel] = []
     let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var contactsTableView: UITableView!
     
     
     static func newInstance() -> ContactsViewController {
@@ -31,12 +33,13 @@ class ContactsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contactsTableView.delegate = self
+        contactsTableView.dataSource = self
+        
         requestAccessForContacts()
         
-        viewModel.contacts.asObservable().subscribe(onNext: { [weak self] value in
-            guard let contactsArray = value else {
-                return
-            }
+        viewModel.contacts.asObservable().subscribe(onNext: { [weak self] contactsArray in
             self?.contacts = contactsArray
         }).disposed(by: disposeBag)
     }
@@ -73,5 +76,43 @@ class ContactsViewController: UIViewController {
     // TODO: implement
     private func manualPermissionInstuctions() {
         print("manual permissions")
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension ContactsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? RawStyleTableViewCell else {
+            return
+        }
+
+        // TODO: handle order tapped
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension ContactsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contacts.count
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RawStyleTableViewCell", for: indexPath) as? RawStyleTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        guard let contact = contacts[safe: indexPath.row] else {
+            // TODO: log
+            return UITableViewCell()
+        }
+        
+        let nameString = viewModel.convertToFullName(contact, as: .firstNameFirst)
+        cell.set(nameString)
+        
+        return cell
     }
 }

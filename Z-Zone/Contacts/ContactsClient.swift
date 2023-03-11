@@ -13,14 +13,15 @@ class ContactsClient {
     static let shared = ContactsClient()
     
     func getContacts() -> [CNContact] {
-        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
+        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
         let store = CNContactStore()
-        var contacts = [CNContact]()
+
+        var contacts: [CNContact] = []
         
         do {
             
-            // TODO: put on qos thread
+            // TODO: put on qos thread (with async?)
             try store.enumerateContacts(with: request) { contact, stop in
                 contacts.append(contact)
             }
