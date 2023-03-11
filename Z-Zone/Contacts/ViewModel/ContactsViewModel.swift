@@ -14,14 +14,21 @@ import RxRelay
 class ContactsViewModel {
     
     var client: ContactsClient?
-    var contacts: BehaviorRelay<[CNContact]?> = BehaviorRelay(value: nil)
+    var contacts: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
     
     init(client: ContactsClient) {
         self.client = client
     }
     
     func getContacts() {
-        let staticContacts = client?.getContacts()
-        contacts.accept(staticContacts)
+        guard let strongClient = client else {
+            return
+        }
+        let cnContacts = strongClient.getContacts()
+        
+        let model: [ContactModel] = cnContacts.map { cnContact in
+            return ContactModel(firstName: "FirstName", lastName: "LastName", contact: cnContact)
+        }
+        contacts.accept(model)
     }
 }

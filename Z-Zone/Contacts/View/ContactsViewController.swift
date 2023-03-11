@@ -12,7 +12,7 @@ import RxSwift
 class ContactsViewController: UIViewController {
     
     let viewModel = ContactsViewModel(client: ContactsClient.shared)
-    var contacts: [CNContact] = []
+    var contacts: [ContactModel] = []
     let disposeBag = DisposeBag()
     
     
@@ -33,10 +33,7 @@ class ContactsViewController: UIViewController {
         super.viewDidLoad()
         requestAccessForContacts()
         
-        viewModel.contacts.asObservable().subscribe(onNext: { [weak self] value in
-            guard let contactsArray = value else {
-                return
-            }
+        viewModel.contacts.asObservable().subscribe(onNext: { [weak self] contactsArray in
             self?.contacts = contactsArray
         }).disposed(by: disposeBag)
     }

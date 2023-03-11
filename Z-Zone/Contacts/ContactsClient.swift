@@ -16,6 +16,7 @@ class ContactsClient {
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
         let store = CNContactStore()
+        // TODO: change format
         var contacts = [CNContact]()
         
         do {
