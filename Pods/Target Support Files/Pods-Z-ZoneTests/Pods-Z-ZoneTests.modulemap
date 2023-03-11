@@ -1,0 +1,6 @@
+framework module Pods_Z_ZoneTests {
+  umbrella header "Pods-Z-ZoneTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,8 +7,14 @@
 
 import UIKit
 import Contacts
+import RxSwift
 
 class ContactsViewController: UIViewController {
+    
+    let viewModel = ContactsViewModel(client: ContactsClient.shared)
+    var contacts: [CNContact] = []
+    let disposeBag = DisposeBag()
+    
     
     static func newInstance() -> ContactsViewController {
         let viewController = buildFromStoryboard("Contacts") as ContactsViewController
@@ -25,42 +31,14 @@ class ContactsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        // contactsTest()
         requestAccessForContacts()
-    }
-    
-    private func contactsTest() {
         
-        var validContacts: [CNContact] = []
-        let contactStore = CNContactStore()
-
-        // Request for contact access
-//        contactStore.requestAccessForEntityType(.Contacts) { (granted, e) -> Void in
-//
-//            if granted {
-//
-//                do {
-//                    // Specify the key fields that you want to be fetched.
-//                    // Note: if you didn't specify your specific field request. your app will crash
-//                    let fetchRequest = CNContactFetchRequest(keysToFetch: [CNContactGivenNameKey, CNContactMiddleNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey, CNContactPhoneNumbersKey, CNContactImageDataKey, CNContactThumbnailImageDataKey])
-//
-//                    try contactStore.enumerateContactsWithFetchRequest(fetchRequest, usingBlock: { (contact, error) -> Void in
-//
-//                        // Lets filter (optional)
-//                        if !contact.emailAddresses.isEmpty || !contact.phoneNumbers.isEmpty {
-//                            validContacts.append(contact)
-//                        }
-//                    })
-//
-//                    print(validContacts)
-//                }catch let e as NSError {
-//                    print(e)
-//                }
-//            }
-//        }
+        viewModel.contacts.asObservable().subscribe(onNext: { [weak self] value in
+            guard let contactsArray = value else {
+                return
+            }
+            self?.contacts = contactsArray
+        }).disposed(by: disposeBag)
     }
     
     private func requestAccessForContacts() {
@@ -68,25 +46,32 @@ class ContactsViewController: UIViewController {
         let contactStore = CNContactStore()
 
         switch CNContactStore.authorizationStatus(for: .contacts) {
-        case .denied, .notDetermined:
+        case .notDetermined:
             contactStore.requestAccess(for: .contacts, completionHandler: { access, error in
-
                 if access {
-                    print("super")
+                    self.viewModel.getContacts()
                 } else {
-                    print("problem")
+                    self.handleError()
                 }
             })
         case .authorized:
-            print("ok")
+            viewModel.getContacts()
         case .restricted:
-            print("restricted")
-//        case .notDetermined:
-//            <#code#>
-//        case .denied:
-//            <#code#>
+            manualPermissionInstuctions()
+        case .denied:
+            manualPermissionInstuctions()
         @unknown default:
-            print("default")
+            handleError()
         }
+    }
+    
+    // TODO: implement
+    private func handleError() {
+        print("handle error")
+    }
+    
+    // TODO: implement
+    private func manualPermissionInstuctions() {
+        print("manual permissions")
     }
 }
