@@ -27,7 +27,7 @@ class ContactsViewModel {
         }
         let cnContacts: [CNContact] = strongClient.getContacts()
         
-        // TODO: do I need to adjust this for other naming styles? maybe use the CnContact names
+        // TODO: do I need to adjust this for other naming styles? maybe use the CnContact prop names
         let model: [ContactModel] = cnContacts.map { cnContact in
             return ContactModel(firstName: cnContact.givenName, lastName: cnContact.familyName, contact: cnContact)
         }

@@ -37,13 +37,6 @@ class ContactsViewController: UIViewController {
         contactsTableView.delegate = self
         contactsTableView.dataSource = self
         
-//        contactsTableView.register(UINib(nibName: "RawStyleTableViewCell", bundle: nil), forCellReuseIdentifier: "RawStyleTableViewCell")
-//        contactsTableView.register(UINib(nibName: "ZStyleTableViewCell", bundle: nil), forCellReuseIdentifier: "ZStyleTableViewCell")
-        
-        
-//        contactsTableView.register(RawStyleTableViewCell.self, forCellReuseIdentifier: "RawStyleTableViewCell")
-//        contactsTableView.register(ZStyleTableViewCell.self, forCellReuseIdentifier: "ZStyleTableViewCell")
-        
         requestAccessForContacts()
         
         viewModel.contacts.asObservable().subscribe(onNext: { [weak self] contactsArray in
@@ -93,7 +86,7 @@ extension ContactsViewController: UITableViewDelegate {
             return
         }
 
-        // cell.handleOrderTapped()
+        // TODO: handle order tapped
     }
 }
 
