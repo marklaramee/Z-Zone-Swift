@@ -13,11 +13,11 @@ class ContactsClient {
     static let shared = ContactsClient()
     
     func getContacts() -> [CNContact] {
-        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
+        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
         let store = CNContactStore()
-        // TODO: change format
-        var contacts = [CNContact]()
+
+        var contacts: [CNContact] = []
         
         do {
             
