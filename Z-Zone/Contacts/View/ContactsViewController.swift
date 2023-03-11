@@ -15,6 +15,8 @@ class ContactsViewController: UIViewController {
     var contacts: [ContactModel] = []
     let disposeBag = DisposeBag()
     
+    @IBOutlet weak var ContactsTableView: UITableView!
+    
     
     static func newInstance() -> ContactsViewController {
         let viewController = buildFromStoryboard("Contacts") as ContactsViewController

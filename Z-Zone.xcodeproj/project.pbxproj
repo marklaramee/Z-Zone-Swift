@@ -27,6 +27,8 @@
 		25D7B9FA297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9F9297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift */; };
 		25EFD6EB29BC5DFA00F816B5 /* ContactsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6EA29BC5DFA00F816B5 /* ContactsClient.swift */; };
 		25EFD6EE29BC687200F816B5 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6ED29BC687200F816B5 /* ContactModel.swift */; };
+		25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */; };
+		25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */; };
 		69ABE06D9F419E544D1DBD92 /* Pods_Z_ZoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AB8BDBFDB4E7E4684CD2A8 /* Pods_Z_ZoneTests.framework */; };
 		89E6705ECDAFD5155CE6BFB8 /* Pods_Z_Zone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B249405FD37E6EAEB76EDC /* Pods_Z_Zone.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		25D7B9F9297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ZoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25EFD6EA29BC5DFA00F816B5 /* ContactsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsClient.swift; sourceTree = "<group>"; };
 		25EFD6ED29BC687200F816B5 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStyleTableViewCell.swift; sourceTree = "<group>"; };
+		25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawStyleTableViewCell.swift; sourceTree = "<group>"; };
 		2648CE18015959758A88C782 /* Pods-Z-Zone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-Zone.release.xcconfig"; path = "Target Support Files/Pods-Z-Zone/Pods-Z-Zone.release.xcconfig"; sourceTree = "<group>"; };
 		5F7766D1E74056C0BA6A3ECE /* Pods-Z-ZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-ZoneTests.release.xcconfig"; path = "Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests.release.xcconfig"; sourceTree = "<group>"; };
 		74B249405FD37E6EAEB76EDC /* Pods_Z_Zone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Z_Zone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,8 @@
 				252E474129BABA9800AD12E8 /* Contacts.storyboard */,
 				252E474329BABAAF00AD12E8 /* ContactsViewController.swift */,
 				252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */,
+				25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */,
+				25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +487,8 @@
 				252E473C29BAA45B00AD12E8 /* UIViewController+Additions.swift in Sources */,
 				252E473929BAA40500AD12E8 /* InfoNavigationController.swift in Sources */,
 				25D7B9D8297364BA00C62781 /* ViewController.swift in Sources */,
+				25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */,
+				25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */,
 				25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */,
 				252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */,
 				25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */,

@@ -21,7 +21,7 @@ class ContactsClient {
         
         do {
             
-            // TODO: put on qos thread
+            // TODO: put on qos thread (with async?)
             try store.enumerateContacts(with: request) { contact, stop in
                 contacts.append(contact)
             }

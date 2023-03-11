@@ -15,6 +15,7 @@ class ContactsViewModel {
     
     var client: ContactsClient?
     var contacts: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
+    var displayType = ContactDisplayType.rawStyle
     
     init(client: ContactsClient) {
         self.client = client

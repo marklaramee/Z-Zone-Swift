@@ -13,3 +13,8 @@ struct ContactModel {
     var lastName: String?
     var contact: CNContact
 }
+
+enum ContactDisplayType {
+    case rawStyle
+    case zStyle
+}
