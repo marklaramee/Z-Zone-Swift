@@ -18,3 +18,8 @@ enum ContactDisplayType {
     case rawStyle
     case zStyle
 }
+
+enum ContactNameSort {
+    case firstNameFirst
+    case lastNameFirst
+}

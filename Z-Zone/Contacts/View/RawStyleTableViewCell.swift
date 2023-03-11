@@ -21,5 +21,9 @@ class RawStyleTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func set(_ name: String) {
+        nameLabel.text = name
+    }
 
 }

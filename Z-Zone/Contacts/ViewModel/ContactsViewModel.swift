@@ -32,4 +32,9 @@ class ContactsViewModel {
         }
         contacts.accept(model)
     }
+    
+    func convertToFullName(_ contact: ContactModel, as: ContactNameSort) -> String {
+        // TODO: implement
+        return "First Lastname"
+    }
 }

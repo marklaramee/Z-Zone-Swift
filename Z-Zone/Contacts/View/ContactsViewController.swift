@@ -15,7 +15,7 @@ class ContactsViewController: UIViewController {
     var contacts: [ContactModel] = []
     let disposeBag = DisposeBag()
     
-    @IBOutlet weak var ContactsTableView: UITableView!
+    @IBOutlet weak var contactsTableView: UITableView!
     
     
     static func newInstance() -> ContactsViewController {
@@ -33,6 +33,17 @@ class ContactsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contactsTableView.delegate = self
+        contactsTableView.dataSource = self
+        
+//        contactsTableView.register(UINib(nibName: "RawStyleTableViewCell", bundle: nil), forCellReuseIdentifier: "RawStyleTableViewCell")
+//        contactsTableView.register(UINib(nibName: "ZStyleTableViewCell", bundle: nil), forCellReuseIdentifier: "ZStyleTableViewCell")
+        
+        
+//        contactsTableView.register(RawStyleTableViewCell.self, forCellReuseIdentifier: "RawStyleTableViewCell")
+//        contactsTableView.register(ZStyleTableViewCell.self, forCellReuseIdentifier: "ZStyleTableViewCell")
+        
         requestAccessForContacts()
         
         viewModel.contacts.asObservable().subscribe(onNext: { [weak self] contactsArray in
@@ -72,5 +83,43 @@ class ContactsViewController: UIViewController {
     // TODO: implement
     private func manualPermissionInstuctions() {
         print("manual permissions")
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension ContactsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? RawStyleTableViewCell else {
+            return
+        }
+
+        // cell.handleOrderTapped()
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension ContactsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contacts.count
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RawStyleTableViewCell", for: indexPath) as? RawStyleTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        guard let contact = contacts[safe: indexPath.row] else {
+            // TODO: log
+            return UITableViewCell()
+        }
+        
+        let nameString = viewModel.convertToFullName(contact, as: .firstNameFirst)
+        cell.set(nameString)
+        
+        return cell
     }
 }
