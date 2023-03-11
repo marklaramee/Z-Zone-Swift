@@ -33,8 +33,14 @@ class ContactsViewModel {
         contacts.accept(model)
     }
     
-    func convertToFullName(_ contact: ContactModel, as: ContactNameSort) -> String {
-        // TODO: implement
-        return "First Lastname"
+    func convertToFullName(_ contact: ContactModel, as asType: ContactNameSort) -> String {
+        let firstName = contact.firstName ?? ""
+        let lastName = contact.lastName ?? ""
+        switch (asType) {
+        case .firstNameFirst:
+            return "\(firstName) \(lastName)".trimmingCharacters(in: .whitespacesAndNewlines)
+        case .lastNameFirst:
+            return "\(lastName) \(firstName)".trimmingCharacters(in: .whitespacesAndNewlines)
+        }
     }
 }
