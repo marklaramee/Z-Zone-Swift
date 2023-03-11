@@ -25,10 +25,11 @@ class ContactsViewModel {
         guard let strongClient = client else {
             return
         }
-        let cnContacts = strongClient.getContacts()
+        let cnContacts: [CNContact] = strongClient.getContacts()
         
+        // TODO: do I need to adjust this for other naming styles? maybe use the CnContact names
         let model: [ContactModel] = cnContacts.map { cnContact in
-            return ContactModel(firstName: "FirstName", lastName: "LastName", contact: cnContact)
+            return ContactModel(firstName: cnContact.givenName, lastName: cnContact.familyName, contact: cnContact)
         }
         contacts.accept(model)
     }
