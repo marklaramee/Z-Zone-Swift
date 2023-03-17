@@ -1,7 +1,5 @@
 # TODO: remove when fixed. Temporarily ignore for M1 computers:
 Z-Zone.xcworkspace/xcshareddata/swiftpm/Package.resolved
-Z-Zone.xcworkspace/xcuserdata/marklaramee.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
-
 
 ## User settings
 xcuserdata/
@@ -64,4 +62,5 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
+
 

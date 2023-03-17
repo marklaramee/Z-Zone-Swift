@@ -12,24 +12,26 @@ class ContactsClient {
     
     static let shared = ContactsClient()
     
-    func getContacts() -> [CNContact] {
-        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey]
-        let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-        let store = CNContactStore()
-
-        var contacts: [CNContact] = []
-        
-        do {
+    // TODO: convert to async
+    // https://developer.apple.com/videos/play/wwdc2021/10194/?time=1290
+    
+    func getContacts(completion: @escaping ([CNContact]?) -> Void) {
+        DispatchQueue.global(qos: .utility).async {
+            let keys = [CNContactGivenNameKey, CNContactFamilyNameKey]
+            let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+            let store = CNContactStore()
             
-            // TODO: put on qos thread (with async?)
-            try store.enumerateContacts(with: request) { contact, stop in
-                contacts.append(contact)
+            do {
+                var contacts: [CNContact] = []
+                try store.enumerateContacts(with: request) { contact, stop in
+                    contacts.append(contact)
+                }
+                completion(contacts)
+            } catch {
+                completion(nil)
+                print("Error retrieving contacts: \(error.localizedDescription)")
             }
-        } catch {
-            print("Error retrieving contacts: \(error.localizedDescription)")
         }
-        
-        return contacts
     }
     
     // TODO:
