@@ -15,4 +15,14 @@ extension Array {
 
         return self[index]
     }
+    
+    func compactMap<ElementOfResult>(_ transform: (Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult] {
+        var result: [ElementOfResult] = []
+        for element in self {
+            if let transformed = try transform(element) {
+                result.append(transformed)
+            }
+        }
+        return result
+    }
 }

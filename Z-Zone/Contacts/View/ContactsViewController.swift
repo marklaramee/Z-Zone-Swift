@@ -118,8 +118,7 @@ extension ContactsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let nameString = viewModel.convertToFullName(contact, as: .firstNameFirst)
-        cell.set(nameString)
+        cell.set(contact.fullName)
         
         return cell
     }

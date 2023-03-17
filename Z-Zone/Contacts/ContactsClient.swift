@@ -64,6 +64,8 @@ class ContactsClient {
     
     
     
+    
+    
     // for reference
     
     // https://stackoverflow.com/questions/33973574/fetching-all-contacts-in-ios-swift

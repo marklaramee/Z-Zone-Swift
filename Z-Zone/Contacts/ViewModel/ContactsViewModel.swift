@@ -29,22 +29,13 @@ class ContactsViewModel {
             }
             let cnContacts: [CNContact] = contacts
             
-            // TODO: do I need to adjust this for other naming styles? maybe use the CnContact prop names
-            let model: [ContactModel] = cnContacts.map { cnContact in
-                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, contact: cnContact)
+            let model: [ContactModel] = cnContacts.compactMap { cnContact in
+                guard let fullName = self.convertToFullName(cnContact) else {
+                    return nil
+                }
+                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: fullName, contact: cnContact)
             }
             self.contactsRelay.accept(model)
-        }
-    }
-    
-    func convertToFullName(_ contact: ContactModel, as asType: ContactNameSort) -> String {
-        let firstName = contact.givenName ?? ""
-        let lastName = contact.familyName ?? ""
-        switch (asType) {
-        case .firstNameFirst:
-            return "\(firstName) \(lastName)".trimmingCharacters(in: .whitespacesAndNewlines)
-        case .lastNameFirst:
-            return "\(lastName) \(firstName)".trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
     
@@ -67,5 +58,17 @@ class ContactsViewModel {
     
     func leaveZZone(_ contact: ContactModel) {
         
+    }
+    
+    private func convertToFullName(_ contact: CNContact) -> String? {
+        switch (ContactsClient.shared.sortOrder) {
+        case .familyName:
+            return "\(contact.familyName) \(contact.givenName)".trimmingCharacters(in: .whitespacesAndNewlines)
+        case .givenName:
+            return "\(contact.givenName) \(contact.familyName)".trimmingCharacters(in: .whitespacesAndNewlines)
+        default:
+            ZLogger.shared.logError("Invalid sort order.", category: .contactsClient)
+            return nil
+        }
     }
 }
