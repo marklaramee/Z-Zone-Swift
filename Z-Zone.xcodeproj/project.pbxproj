@@ -16,6 +16,7 @@
 		252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474329BABAAF00AD12E8 /* ContactsViewController.swift */; };
 		252E474629BABAD500AD12E8 /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */; };
 		252E474929BABAFF00AD12E8 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474829BABAFF00AD12E8 /* ContactsViewModel.swift */; };
+		25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377229C51A74007BA6D2 /* ZLogger.swift */; };
 		25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D3297364BA00C62781 /* AppDelegate.swift */; };
 		25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D5297364BA00C62781 /* SceneDelegate.swift */; };
 		25D7B9D8297364BA00C62781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D7297364BA00C62781 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		252E474329BABAAF00AD12E8 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNavigationController.swift; sourceTree = "<group>"; };
 		252E474829BABAFF00AD12E8 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		25B1377229C51A74007BA6D2 /* ZLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLogger.swift; sourceTree = "<group>"; };
 		25D7B9D0297364BA00C62781 /* Z-Zone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Z-Zone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D7B9D3297364BA00C62781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25D7B9D5297364BA00C62781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,12 +129,12 @@
 			path = Contacts;
 			sourceTree = "<group>";
 		};
-		252E473229BAA34800AD12E8 /* info */ = {
+		252E473229BAA34800AD12E8 /* Info */ = {
 			isa = PBXGroup;
 			children = (
 				252E473329BAA35C00AD12E8 /* View */,
 			);
-			path = info;
+			path = Info;
 			sourceTree = "<group>";
 		};
 		252E473329BAA35C00AD12E8 /* View */ = {
@@ -158,6 +160,9 @@
 		252E473D29BAA52900AD12E8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				25D7B9DF297364BD00C62781 /* Assets.xcassets */,
+				25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */,
+				25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */,
 				25D7B9D3297364BA00C62781 /* AppDelegate.swift */,
 				25D7B9D5297364BA00C62781 /* SceneDelegate.swift */,
 				252E472F29BAA01200AD12E8 /* Main.storyboard */,
@@ -183,6 +188,14 @@
 				252E474829BABAFF00AD12E8 /* ContactsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25B1377129C51A0B007BA6D2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				25B1377229C51A74007BA6D2 /* ZLogger.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		25D7B9C7297364BA00C62781 = {
@@ -213,12 +226,10 @@
 				252E473129BAA33E00AD12E8 /* Contacts */,
 				252E473D29BAA52900AD12E8 /* Core */,
 				252E473A29BAA43D00AD12E8 /* Extensions */,
-				252E473229BAA34800AD12E8 /* info */,
+				252E473229BAA34800AD12E8 /* Info */,
 				25D7B9D7297364BA00C62781 /* ViewController.swift */,
-				25D7B9DF297364BD00C62781 /* Assets.xcassets */,
-				25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */,
 				25D7B9E4297364BD00C62781 /* Info.plist */,
-				25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */,
+				25B1377129C51A0B007BA6D2 /* Utility */,
 			);
 			path = "Z-Zone";
 			sourceTree = "<group>";
@@ -498,6 +509,7 @@
 				25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */,
 				25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */,
 				25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */,
+				25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */,
 				252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */,
 				25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */,
 				25EFD6EE29BC687200F816B5 /* ContactModel.swift in Sources */,
