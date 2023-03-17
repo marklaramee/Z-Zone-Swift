@@ -49,7 +49,14 @@ class ContactsViewModel {
     }
     
     func enterZZone(_ contact: ContactModel) {
-        
+        switch ContactsClient.shared.sortOrder {
+        case .familyName:
+            print("family name")
+        case .givenName:
+            print("given")
+        default:
+            print("no order set")
+        }
     }
     
     func leaveZZone(_ contact: ContactModel) {

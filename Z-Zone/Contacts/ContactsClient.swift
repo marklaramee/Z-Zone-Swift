@@ -18,6 +18,10 @@ class ContactsClient {
     // TODO: convert to async
     // https://developer.apple.com/videos/play/wwdc2021/10194/?time=1290
     
+    init() {
+        sortOrder = CNContactsUserDefaults.shared().sortOrder
+    }
+    
     func getContacts(completion: @escaping ([CNContact]?) -> Void) {
         DispatchQueue.global(qos: .utility).async {
             let keys = [CNContactGivenNameKey, CNContactFamilyNameKey]
@@ -37,7 +41,7 @@ class ContactsClient {
     }
     
     // TODO:
-    func editContact(contact: CNContact, newLastName: String) {
+    func updateContact(contact: CNContact, newLastName: String) {
         // Create a mutable copy of the contact
         let mutableContact = contact.mutableCopy() as! CNMutableContact
         

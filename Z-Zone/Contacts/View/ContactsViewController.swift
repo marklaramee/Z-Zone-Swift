@@ -84,11 +84,17 @@ class ContactsViewController: UIViewController {
 // MARK: - UITableViewDelegate
 extension ContactsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? RawStyleTableViewCell else {
-            return
-        }
+//        guard let cell = tableView.cellForRow(at: indexPath) as? RawStyleTableViewCell else {
+//            return
+//        }
 
         // TODO: handle order tapped
+        guard let contact = viewModel.contactsRelay.value[safe: indexPath.row] else {
+            ZLogger.shared.logError(message: "Could not get contact", category: .contacts)
+            return
+        }
+        
+        viewModel.enterZZone(contact)
     }
 }
 

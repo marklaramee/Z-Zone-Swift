@@ -17,7 +17,7 @@ enum LogLevel: String {
 }
 
 enum LogCategory: String {
-    case temp
+    case contacts
 }
 
 class ZLogger {
