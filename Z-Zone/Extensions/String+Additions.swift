@@ -32,14 +32,23 @@ extension String {
         return result
     }
     
-    func removeZZoneIfPresent(_ name: String) -> String {
+    func removeZZone(_ name: String) -> String {
         let zZone = "zzz"
-        var result = name
-        if result.hasPrefix(zZone) {
-            let index = result.index(result.startIndex, offsetBy: zZone.count)
-            result.removeSubrange(result.startIndex..<index)
+        guard name.hasPrefix(zZone) else {
+            return name
         }
+        var result = name
+        let index = result.index(result.startIndex, offsetBy: zZone.count)
+        result.removeSubrange(result.startIndex..<index)
         return result
+    }
+    
+    func enterZZone(_ name: String) -> String {
+        let zZone = "zzz"
+        guard !name.hasPrefix(zZone) else {
+            return name
+        }
+        return "\(zZone)\(name)"
     }
     
 }
