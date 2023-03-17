@@ -12,11 +12,9 @@ import RxSwift
 import RxRelay
 
 class ContactsViewModel {
-    
+    let zZone = "zzz"
     var client: ContactsClient?
-
     var contactsRelay: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
-
     var displayType = ContactDisplayType.rawStyle
     
     init(client: ContactsClient) {
@@ -50,7 +48,11 @@ class ContactsViewModel {
         }
     }
     
-    func enterZZone() {
+    func enterZZone(_ contact: ContactModel) {
+        
+    }
+    
+    func leaveZZone(_ contact: ContactModel) {
         
     }
 }
