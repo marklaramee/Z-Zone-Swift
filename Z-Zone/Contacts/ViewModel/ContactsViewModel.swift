@@ -33,7 +33,14 @@ class ContactsViewModel {
                 guard let fullName = self.convertToFullName(cnContact) else {
                     return nil
                 }
+                
                 var isZone = false;
+                switch(ContactsClient.shared.sortOrder) {
+                case .familyName:
+                    isZone = cnContact.familyName.hasPrefix(self.zZone)
+                case .givenName:
+                    isZone = cnContact.givenName.hasPrefix(self.zZone)
+                }
                 
                 return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: fullName, contact: cnContact, isZZone: isZone)
             }
