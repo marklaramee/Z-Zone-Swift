@@ -12,6 +12,9 @@ class ContactsClient {
     
     static let shared = ContactsClient()
     
+    var sortOrder: CNContactSortOrder = .userDefault
+    let store = CNContactStore()
+    
     // TODO: convert to async
     // https://developer.apple.com/videos/play/wwdc2021/10194/?time=1290
     
@@ -19,11 +22,10 @@ class ContactsClient {
         DispatchQueue.global(qos: .utility).async {
             let keys = [CNContactGivenNameKey, CNContactFamilyNameKey]
             let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-            let store = CNContactStore()
             
             do {
                 var contacts: [CNContact] = []
-                try store.enumerateContacts(with: request) { contact, stop in
+                try self.store.enumerateContacts(with: request) { contact, stop in
                     contacts.append(contact)
                 }
                 completion(contacts)
