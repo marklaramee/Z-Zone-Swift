@@ -49,4 +49,8 @@ class ContactsViewModel {
             return "\(lastName) \(firstName)".trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
+    
+    func enterZZone() {
+        
+    }
 }

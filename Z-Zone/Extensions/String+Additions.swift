@@ -8,19 +8,6 @@
 import Foundation
 
 extension String {
-    /// Trims beginning and ending whitespace
-    //    func trim() -> NSAttributedString {
-    //        let invertedSet = CharacterSet.whitespacesAndNewlines.inverted
-    //        let startRange = string.rangeOfCharacter(from: invertedSet)
-    //        let endRange = string.rangeOfCharacter(from: invertedSet, options: .backwards)
-    //        guard let startLocation = startRange?.lowerBound, let endLocation = endRange?.lowerBound else {
-    //            return NSAttributedString(string: string)
-    //        }
-    //
-    //        let trimmedRange = startLocation...endLocation
-    //        return attributedSubstring(from: NSRange(trimmedRange, in: string))
-    //    }
-    
     func trim(_ name: String) -> String {
         var result = name
         while result.first == " " {
@@ -32,23 +19,22 @@ extension String {
         return result
     }
     
-    func removeZZone(_ name: String) -> String {
-        let zZone = "zzz"
-        guard name.hasPrefix(zZone) else {
-            return name
+    func removeIfPresent(_ remove: String) -> String {
+        guard self.hasPrefix(remove) else {
+            return self
         }
-        var result = name
-        let index = result.index(result.startIndex, offsetBy: zZone.count)
+        var result = self
+        // TODO: change to 0?
+        let index = result.index(result.startIndex, offsetBy: remove.count)
         result.removeSubrange(result.startIndex..<index)
         return result
     }
     
-    func enterZZone(_ name: String) -> String {
-        let zZone = "zzz"
-        guard !name.hasPrefix(zZone) else {
-            return name
+    func prependIfNotPresent(_ prefix: String) -> String {
+        guard !self.hasPrefix(prefix) else {
+            return self
         }
-        return "\(zZone)\(name)"
+        return "\(prefix)\(self)"
     }
     
 }
