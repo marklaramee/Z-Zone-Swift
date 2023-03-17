@@ -14,7 +14,9 @@ import RxRelay
 class ContactsViewModel {
     
     var client: ContactsClient?
+
     var contactsRelay: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
+
     var displayType = ContactDisplayType.rawStyle
     
     init(client: ContactsClient) {
@@ -35,8 +37,6 @@ class ContactsViewModel {
             }
             self.contactsRelay.accept(model)
         }
-        
-        
     }
     
     func convertToFullName(_ contact: ContactModel, as asType: ContactNameSort) -> String {

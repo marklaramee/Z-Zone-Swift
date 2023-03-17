@@ -37,7 +37,7 @@ class ContactsViewController: UIViewController {
         contactsTableView.dataSource = self
         
         requestAccessForContacts()
-        
+    
         viewModel.contactsRelay.asObservable().subscribe(onNext: { [weak self] contactsArray in
             self?.contacts = contactsArray
             DispatchQueue.main.async {
