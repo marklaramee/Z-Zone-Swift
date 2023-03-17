@@ -33,7 +33,9 @@ class ContactsViewModel {
                 guard let fullName = self.convertToFullName(cnContact) else {
                     return nil
                 }
-                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: fullName, contact: cnContact)
+                var isZone = false;
+                
+                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: fullName, contact: cnContact, isZZone: isZone)
             }
             self.contactsRelay.accept(model)
         }
@@ -49,9 +51,6 @@ class ContactsViewModel {
             mutableContact.familyName = mutableContact.familyName .prependIfNotPresent(zZone)
         case .givenName:
             mutableContact.givenName = mutableContact.givenName.prependIfNotPresent(zZone)
-        default:
-            ZLogger.shared.logError("Invalid name sort order.", category: .contactsViewModel)
-            return
         }
         ContactsClient.shared.updateContact(mutableContact)
     }
@@ -66,9 +65,6 @@ class ContactsViewModel {
             return "\(contact.familyName) \(contact.givenName)".trimmingCharacters(in: .whitespacesAndNewlines)
         case .givenName:
             return "\(contact.givenName) \(contact.familyName)".trimmingCharacters(in: .whitespacesAndNewlines)
-        default:
-            ZLogger.shared.logError("Invalid sort order.", category: .contactsClient)
-            return nil
         }
     }
 }

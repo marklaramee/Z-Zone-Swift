@@ -14,6 +14,7 @@ struct ContactModel {
     var familyName: String
     var fullName: String
     var contact: CNContact
+    var isZZone: Bool
 }
 
 // TODO: remove?
@@ -22,8 +23,7 @@ enum ContactDisplayType {
     case zStyle
 }
 
-// TODO: use store
 enum ContactNameSort {
-    case firstNameFirst
-    case lastNameFirst
+    case givenName
+    case familyName
 }

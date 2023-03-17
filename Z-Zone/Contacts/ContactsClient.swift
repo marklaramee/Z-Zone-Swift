@@ -12,14 +12,21 @@ class ContactsClient {
     
     static let shared = ContactsClient()
     
-    var sortOrder: CNContactSortOrder = .userDefault
+    var sortOrder: ContactNameSort = .familyName
     let store = CNContactStore()
     
     // TODO: convert to async
     // https://developer.apple.com/videos/play/wwdc2021/10194/?time=1290
     
     init() {
-        sortOrder = CNContactsUserDefaults.shared().sortOrder
+        switch (CNContactsUserDefaults.shared().sortOrder) {
+        case .familyName:
+            sortOrder = .familyName
+        case .givenName:
+            sortOrder = .givenName
+        default:
+            ZLogger.shared.logError("Invalid sort order from store.", category: .contactsClient)
+        }
     }
     
     func getContacts(completion: @escaping ([CNContact]?) -> Void) {
