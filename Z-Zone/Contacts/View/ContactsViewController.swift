@@ -17,7 +17,6 @@ class ContactsViewController: UIViewController {
     
     @IBOutlet weak var contactsTableView: UITableView!
     
-    
     static func newInstance() -> ContactsViewController {
         let viewController = buildFromStoryboard("Contacts") as ContactsViewController
         return viewController
@@ -39,8 +38,11 @@ class ContactsViewController: UIViewController {
         
         requestAccessForContacts()
         
-        viewModel.contacts.asObservable().subscribe(onNext: { [weak self] contactsArray in
+        viewModel.contactsRelay.asObservable().subscribe(onNext: { [weak self] contactsArray in
             self?.contacts = contactsArray
+            DispatchQueue.main.async {
+                self?.contactsTableView.reloadData()
+            }
         }).disposed(by: disposeBag)
     }
     
