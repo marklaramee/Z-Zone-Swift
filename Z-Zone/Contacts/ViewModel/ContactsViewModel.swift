@@ -31,15 +31,15 @@ class ContactsViewModel {
             
             // TODO: do I need to adjust this for other naming styles? maybe use the CnContact prop names
             let model: [ContactModel] = cnContacts.map { cnContact in
-                return ContactModel(firstName: cnContact.givenName, lastName: cnContact.familyName, contact: cnContact)
+                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, contact: cnContact)
             }
             self.contactsRelay.accept(model)
         }
     }
     
     func convertToFullName(_ contact: ContactModel, as asType: ContactNameSort) -> String {
-        let firstName = contact.firstName ?? ""
-        let lastName = contact.lastName ?? ""
+        let firstName = contact.givenName ?? ""
+        let lastName = contact.familyName ?? ""
         switch (asType) {
         case .firstNameFirst:
             return "\(firstName) \(lastName)".trimmingCharacters(in: .whitespacesAndNewlines)

@@ -9,8 +9,8 @@ import Foundation
 import Contacts
 
 struct ContactModel {
-    var firstName: String?
-    var lastName: String?
+    var givenName: String?
+    var familyName: String?
     var contact: CNContact
 }
 
