@@ -109,7 +109,7 @@ extension ContactsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RawStyleTableViewCell", for: indexPath) as? RawStyleTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ZStyleTableViewCell", for: indexPath) as? ZStyleTableViewCell else {
             return UITableViewCell()
         }
         
@@ -118,7 +118,7 @@ extension ContactsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.set(contact.fullName)
+        cell.set(contact)
         
         return cell
     }

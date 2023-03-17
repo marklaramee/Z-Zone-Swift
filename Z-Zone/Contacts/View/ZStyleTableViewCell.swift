@@ -22,5 +22,15 @@ class ZStyleTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func set(_ contact: ContactModel) {
+        nameLabel.text = contact.fullName
+        
+        if contact.isZZone {
+            zImageView.image = UIImage(named: "purple-temp")
+        } else {
+            zImageView.image = nil
+        }
+    }
 
 }
