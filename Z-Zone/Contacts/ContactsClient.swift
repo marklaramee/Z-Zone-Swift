@@ -41,15 +41,13 @@ class ContactsClient {
     }
     
     // TODO:
-    func updateContact(_ contactModel: ContactModel) {
+    func updateContact(_ contact: CNMutableContact) {
         guard sortOrder == .givenName || sortOrder == .familyName else {
             ZLogger.shared.logError("Invalid name sort order.", category: .contactsClient)
             return
         }
-        // Method reuires a mutable copy
-        let mutableContact = contactModel.contact.mutableCopy() as! CNMutableContact
         let saveRequest = CNSaveRequest()
-        saveRequest.update(mutableContact)
+        saveRequest.update(contact)
         
         do {
             try store.execute(saveRequest)

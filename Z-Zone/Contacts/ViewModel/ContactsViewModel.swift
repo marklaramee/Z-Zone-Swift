@@ -48,24 +48,21 @@ class ContactsViewModel {
         }
     }
     
-    func enterZZone(_ contact: ContactModel) {
-        var mutableContact = contact
+    func enterZZone(_ contactModel: ContactModel) {
+        guard let mutableContact = contactModel.contact.mutableCopy() as? CNMutableContact else {
+            ZLogger.shared.logError("Could not get mutable contact.", category: .contactsViewModel)
+            return
+        }
         switch ContactsClient.shared.sortOrder {
         case .familyName:
-            guard let name = mutableContact.familyName else {
-                return
-            }
-            mutableContact.familyName = name.prependIfNotPresent(zZone)
+            mutableContact.familyName = mutableContact.familyName .prependIfNotPresent(zZone)
         case .givenName:
-            guard let name = mutableContact.givenName else {
-                return
-            }
-            mutableContact.givenName = name.prependIfNotPresent(zZone)
+            mutableContact.givenName = mutableContact.givenName.prependIfNotPresent(zZone)
         default:
             ZLogger.shared.logError("Invalid name sort order.", category: .contactsViewModel)
             return
         }
-        ContactsClient.shared.updateContact(contact)
+        ContactsClient.shared.updateContact(mutableContact)
     }
     
     func leaveZZone(_ contact: ContactModel) {
