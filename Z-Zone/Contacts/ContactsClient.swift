@@ -41,21 +41,19 @@ class ContactsClient {
     }
     
     // TODO:
-    func updateContact(contact: CNContact, newLastName: String) {
-        // Create a mutable copy of the contact
-        let mutableContact = contact.mutableCopy() as! CNMutableContact
-        
-        // Set the new last name
-        mutableContact.familyName = newLastName
-        
-        // Save the edited contact to the contact store
-        let store = CNContactStore()
+    func updateContact(_ contactModel: ContactModel) {
+        guard sortOrder == .givenName || sortOrder == .familyName else {
+            ZLogger.shared.logError("Invalid name sort order.", category: .contactsClient)
+            return
+        }
+        // Method reuires a mutable copy
+        let mutableContact = contactModel.contact.mutableCopy() as! CNMutableContact
         let saveRequest = CNSaveRequest()
         saveRequest.update(mutableContact)
         
         do {
             try store.execute(saveRequest)
-            print("Contact saved successfully")
+            ZLogger.shared.log(level: .info, message: "Contact saved successfully", category: .contactsClient)
         } catch {
             print("Error saving contact: \(error.localizedDescription)")
         }

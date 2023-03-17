@@ -17,7 +17,9 @@ enum LogLevel: String {
 }
 
 enum LogCategory: String {
-    case contacts
+    case contactsClient
+    case contactsViewController
+    case contactsViewModel
 }
 
 class ZLogger {
@@ -32,7 +34,7 @@ class ZLogger {
         logger.log("\(message)")
     }
     
-    func logError(message: String, category: LogCategory) {
+    func logError(_ message: String, category: LogCategory) {
         log(level: .error, message: message, category: category)
     }
 }

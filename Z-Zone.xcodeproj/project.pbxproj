@@ -152,10 +152,10 @@
 		252E473A29BAA43D00AD12E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				252E473B29BAA45B00AD12E8 /* UIViewController+Additions.swift */,
 				25EFD6F329BC737500F816B5 /* Array+Additions.swift */,
 				25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */,
 				25B1377429C51B78007BA6D2 /* String+Additions.swift */,
+				252E473B29BAA45B00AD12E8 /* UIViewController+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

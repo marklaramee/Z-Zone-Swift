@@ -49,14 +49,23 @@ class ContactsViewModel {
     }
     
     func enterZZone(_ contact: ContactModel) {
+        var mutableContact = contact
         switch ContactsClient.shared.sortOrder {
         case .familyName:
-            print("family name")
+            guard let name = mutableContact.familyName else {
+                return
+            }
+            mutableContact.familyName = name.prependIfNotPresent(zZone)
         case .givenName:
-            print("given")
+            guard let name = mutableContact.givenName else {
+                return
+            }
+            mutableContact.givenName = name.prependIfNotPresent(zZone)
         default:
-            print("no order set")
+            ZLogger.shared.logError("Invalid name sort order.", category: .contactsViewModel)
+            return
         }
+        ContactsClient.shared.updateContact(contact)
     }
     
     func leaveZZone(_ contact: ContactModel) {

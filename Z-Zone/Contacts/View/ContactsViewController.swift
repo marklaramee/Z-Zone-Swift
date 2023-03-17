@@ -90,7 +90,7 @@ extension ContactsViewController: UITableViewDelegate {
 
         // TODO: handle order tapped
         guard let contact = viewModel.contactsRelay.value[safe: indexPath.row] else {
-            ZLogger.shared.logError(message: "Could not get contact", category: .contacts)
+            ZLogger.shared.logError("Could not get contact", category: .contactsViewController)
             return
         }
         
