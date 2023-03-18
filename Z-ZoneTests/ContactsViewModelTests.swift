@@ -64,5 +64,21 @@ final class ContactsViewModelTests: XCTestCase {
             XCTAssert(false)
         }
     }
+    
+//    func testEnterZone_updates() throws {
+//        let normalContact = testClient.generateContact(given: "Given", family: "Family", isZone: false)
+//    }
+//    
+//    func testEnterZone_doesNotUpdaate() throws {
+//        
+//    }
+//    
+//    func testLeaveZone_updates() throws {
+//        
+//    }
+//    
+//    func testLeaveZone_doesNotUpdaate() throws {
+//        
+//    }
 
 }
