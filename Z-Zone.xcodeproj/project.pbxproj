@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252E360229C629C7006C101A /* ContactsTestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E360129C629C7006C101A /* ContactsTestClient.swift */; };
 		252E473029BAA01200AD12E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252E472F29BAA01200AD12E8 /* Main.storyboard */; };
 		252E473529BAA36A00AD12E8 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252E473429BAA36A00AD12E8 /* Info.storyboard */; };
 		252E473729BAA3B000AD12E8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E473629BAA3B000AD12E8 /* InfoViewController.swift */; };
@@ -26,7 +27,7 @@
 		25D7B9DE297364BA00C62781 /* Z_Zone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */; };
 		25D7B9E0297364BD00C62781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25D7B9DF297364BD00C62781 /* Assets.xcassets */; };
 		25D7B9E3297364BD00C62781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */; };
-		25D7B9EE297364BD00C62781 /* Z_ZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9ED297364BD00C62781 /* Z_ZoneTests.swift */; };
+		25D7B9EE297364BD00C62781 /* ContactsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9ED297364BD00C62781 /* ContactsViewModelTests.swift */; };
 		25D7B9F8297364BD00C62781 /* Z_ZoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9F7297364BD00C62781 /* Z_ZoneUITests.swift */; };
 		25D7B9FA297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9F9297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift */; };
 		25EFD6EB29BC5DFA00F816B5 /* ContactsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6EA29BC5DFA00F816B5 /* ContactsClient.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		11B3BD8B7A755A7E16B51CC3 /* Pods-Z-ZoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-ZoneTests.debug.xcconfig"; path = "Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		252E360129C629C7006C101A /* ContactsTestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTestClient.swift; sourceTree = "<group>"; };
 		252E472F29BAA01200AD12E8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		252E473429BAA36A00AD12E8 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		252E473629BAA3B000AD12E8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		25D7B9E2297364BD00C62781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25D7B9E4297364BD00C62781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25D7B9E9297364BD00C62781 /* Z-ZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Z-ZoneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		25D7B9ED297364BD00C62781 /* Z_ZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ZoneTests.swift; sourceTree = "<group>"; };
+		25D7B9ED297364BD00C62781 /* ContactsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModelTests.swift; sourceTree = "<group>"; };
 		25D7B9F3297364BD00C62781 /* Z-ZoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Z-ZoneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D7B9F7297364BD00C62781 /* Z_ZoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ZoneUITests.swift; sourceTree = "<group>"; };
 		25D7B9F9297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ZoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -246,7 +248,8 @@
 		25D7B9EC297364BD00C62781 /* Z-ZoneTests */ = {
 			isa = PBXGroup;
 			children = (
-				25D7B9ED297364BD00C62781 /* Z_ZoneTests.swift */,
+				25D7B9ED297364BD00C62781 /* ContactsViewModelTests.swift */,
+				252E360129C629C7006C101A /* ContactsTestClient.swift */,
 			);
 			path = "Z-ZoneTests";
 			sourceTree = "<group>";
@@ -533,7 +536,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25D7B9EE297364BD00C62781 /* Z_ZoneTests.swift in Sources */,
+				25D7B9EE297364BD00C62781 /* ContactsViewModelTests.swift in Sources */,
+				252E360229C629C7006C101A /* ContactsTestClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
