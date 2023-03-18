@@ -28,7 +28,7 @@ class ContactsViewModel {
                 return
             }
             let cnContacts: [CNContact] = contacts
-            
+
             let model: [ContactModel] = cnContacts.compactMap { cnContact in
                 var isZone = false;
                 switch(ContactsClient.shared.sortOrder) {
