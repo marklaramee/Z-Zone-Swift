@@ -55,7 +55,7 @@ class ContactsViewModel {
         }
         switch ContactsClient.shared.sortOrder {
         case .familyName:
-            mutableContact.familyName = mutableContact.familyName .prependIfNotPresent(zZone)
+            mutableContact.familyName = mutableContact.familyName.prependIfNotPresent(zZone)
         case .givenName:
             mutableContact.givenName = mutableContact.givenName.prependIfNotPresent(zZone)
         }
@@ -73,8 +73,28 @@ class ContactsViewModel {
         
     }
     
-    func leaveZZone(_ contact: ContactModel) {
+    func leaveZZone(_ contactModel: inout ContactModel) {
+        guard contactModel.isZZone, let mutableContact = contactModel.contact.mutableCopy() as? CNMutableContact else {
+            // ZLogger.shared.logError("Could not get mutable contact.", category: .contactsViewModel)
+            return
+        }
+        switch ContactsClient.shared.sortOrder {
+        case .familyName:
+            mutableContact.familyName = mutableContact.familyName.removeIfPresent(zZone)
+        case .givenName:
+            mutableContact.givenName = mutableContact.givenName.removeIfPresent(zZone)
+        }
+        ContactsClient.shared.updateContact(mutableContact)
         
+        contactModel.isZZone = false
+        contactModel.contact = mutableContact
+        
+        // update the behavior relay
+        var contacts = contactsRelay.value
+        if let index = contacts.firstIndex(where: { $0.contact ==== contactModel.contact }) {
+            contacts[index] = contactModel
+        }
+        contactsRelay.accept(contacts)
     }
     
     private func convertToFullName(_ contact: CNContact) -> String? {

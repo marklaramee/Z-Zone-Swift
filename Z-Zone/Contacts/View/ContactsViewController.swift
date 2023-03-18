@@ -94,7 +94,13 @@ extension ContactsViewController: UITableViewDelegate {
             return
         }
         
-        viewModel.enterZZone(&contact)
+        switch(contact.isZZone) {
+        case true:
+            viewModel.leaveZZone(&contact)
+        case false:
+            viewModel.enterZZone(&contact)
+        }
+
     }
 }
 
