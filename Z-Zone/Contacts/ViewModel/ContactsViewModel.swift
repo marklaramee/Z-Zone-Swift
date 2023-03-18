@@ -38,7 +38,10 @@ class ContactsViewModel {
                     isZone = cnContact.givenName.hasPrefix(self.zZone)
                 }
                 
-                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: self.convertToFullName(cnContact), contact: cnContact, isZZone: isZone)
+                return ContactModel(
+                    fullName: self.convertToFullName(cnContact),
+                    contact: cnContact,
+                    isZZone: isZone)
             }
             let sortedContacts = model.sorted{ $0.fullName < $1.fullName}
             self.contactsRelay.accept(sortedContacts)
@@ -95,6 +98,7 @@ class ContactsViewModel {
         contactsRelay.accept(contacts)
     }
     
+    // TODO: fix this to use the model names unedited
     private func convertToFullName(_ contact: CNContact) -> String {
         switch (ContactsClient.shared.sortOrder) {
         case .familyName:

@@ -10,8 +10,6 @@ import Contacts
 
 // TODO: remove nillable?
 struct ContactModel: Equatable {
-    var givenName: String
-    var familyName: String
     var fullName: String
     var contact: CNContact
     var isZZone: Bool
