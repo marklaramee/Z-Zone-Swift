@@ -22,18 +22,62 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGm-SU-nyH" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LP-lx-Dj1">
-                                                <rect key="frame" x="0.0" y="70" width="393" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJQ-nl-z04" userLabel="Containing View">
+                                                <rect key="frame" x="16" y="32" width="361" height="600"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z-Zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-Jo-9sl">
+                                                        <rect key="frame" x="0.0" y="35" width="361" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How It Works" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-s7-BeM">
+                                                        <rect key="frame" x="16" y="72" width="329" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBY-BL-4xY" customClass="VerticalAlignLabel" customModule="Z_Zone" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="109" width="361" height="400"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="400" id="yv4-7u-UZ2"/>
+                                                        </constraints>
+                                                        <mutableString key="text">Do you have numbers in your phone that you can’t delete; but,never want to accidentally call? Like your boss or an ex? 
+
+You need a Z-Zone. 
+
+You create a Z-Zone by adding 3 z’s to the beginning of a contact’s name so they are pushed down to the end of your contacts list.
+
+When I found out about this I had dozens of contacts to move there.  However, it was a very tedious process. 
+
+The Z-Zone app makes it easy to add and remove contacts from your Z-Zone. Simply go to the contacts screen and click a contact to move it in or out of your Z-Zone. A contact in your Z-Zone will appear with a purple “Z” background. When you leave the app and go to your phone’s contacts, you’ll see that all of your Z-Zone contacts are now safely tucked away at the bottom of the list.
+</mutableString>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="1YZ-4Q-4hB"/>
+                                                    <constraint firstItem="bGh-Jo-9sl" firstAttribute="top" secondItem="wJQ-nl-z04" secondAttribute="top" constant="35" id="2yV-dA-i7a"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lbw-s7-BeM" secondAttribute="trailing" constant="16" id="3Iv-Ay-7W8"/>
+                                                    <constraint firstItem="lbw-s7-BeM" firstAttribute="leading" secondItem="wJQ-nl-z04" secondAttribute="leading" constant="16" id="Gkw-Xx-KSr"/>
+                                                    <constraint firstItem="dBY-BL-4xY" firstAttribute="top" secondItem="lbw-s7-BeM" secondAttribute="bottom" constant="16" id="Hqb-Hi-qYY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bGh-Jo-9sl" secondAttribute="trailing" id="XrX-BH-IIr"/>
+                                                    <constraint firstItem="lbw-s7-BeM" firstAttribute="top" secondItem="bGh-Jo-9sl" secondAttribute="bottom" constant="16" id="eZE-Fa-eUR"/>
+                                                    <constraint firstItem="bGh-Jo-9sl" firstAttribute="leading" secondItem="wJQ-nl-z04" secondAttribute="leading" id="lHX-of-0YP"/>
+                                                    <constraint firstItem="dBY-BL-4xY" firstAttribute="leading" secondItem="wJQ-nl-z04" secondAttribute="leading" id="mYV-xq-v6r"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dBY-BL-4xY" secondAttribute="trailing" id="vrM-dS-Q2a"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="6LP-lx-Dj1" secondAttribute="trailing" id="GnE-vo-bt1"/>
-                                            <constraint firstItem="6LP-lx-Dj1" firstAttribute="leading" secondItem="TGm-SU-nyH" secondAttribute="leading" id="jjR-Df-Esm"/>
-                                            <constraint firstItem="6LP-lx-Dj1" firstAttribute="top" secondItem="TGm-SU-nyH" secondAttribute="top" constant="70" id="w9d-W8-x1U"/>
+                                            <constraint firstItem="wJQ-nl-z04" firstAttribute="top" secondItem="TGm-SU-nyH" secondAttribute="top" constant="32" id="5zG-Ld-65t"/>
+                                            <constraint firstAttribute="height" constant="852" id="RVN-0y-Vg6"/>
+                                            <constraint firstItem="wJQ-nl-z04" firstAttribute="leading" secondItem="TGm-SU-nyH" secondAttribute="leading" constant="16" id="am6-DJ-uqf"/>
+                                            <constraint firstAttribute="trailing" secondItem="wJQ-nl-z04" secondAttribute="trailing" constant="16" id="gqw-fK-E7y"/>
                                         </constraints>
                                     </view>
                                 </subviews>
