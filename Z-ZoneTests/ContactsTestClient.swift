@@ -16,6 +16,7 @@ struct TestData {
 
 class ContactsTestClient: ContactsClient {
     let zZone = "zzz"
+    
     let testData: [TestData] = [
         TestData(given: "Walter", family: "Hill"),
         TestData(given: "Ian" , family: "Holm"),
@@ -30,7 +31,7 @@ class ContactsTestClient: ContactsClient {
         TestData(given: "Jon" , family: "Mollo"),
         TestData(given: "Les", family: "Dilley")
     ]
-    var testContacts: [CNContact] = []
+    private var testContacts: [CNContact] = []
 
     
     func generateContacts(normal: Int, zone: Int, sortOrder: ContactNameSort) {
