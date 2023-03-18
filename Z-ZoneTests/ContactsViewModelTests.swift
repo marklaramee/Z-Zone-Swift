@@ -52,5 +52,17 @@ final class ContactsViewModelTests: XCTestCase {
             XCTAssert(false)
         }
     }
+    
+    func testGetContacts_sortOrder() throws {
+        testClient.generateContacts(normal: 2, zone: 2)
+        viewModel.getContacts()
+        do {
+            let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            XCTAssert(models![0].fullName == "Hill, Walter")
+            XCTAssert(models![4].fullName == "Stanton, Harry Dean")
+        } catch {
+            XCTAssert(false)
+        }
+    }
 
 }
