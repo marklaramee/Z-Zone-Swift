@@ -33,6 +33,9 @@ class ContactsTestClient: ContactsClient {
     ]
     private var testContacts: [CNContact] = []
 
+    override func getContacts(completion: @escaping ([CNContact]?) -> Void) {
+        completion(testContacts)
+    }
     
     func generateContacts(normal: Int, zone: Int, sortOrder: ContactNameSort) {
         testContacts = []

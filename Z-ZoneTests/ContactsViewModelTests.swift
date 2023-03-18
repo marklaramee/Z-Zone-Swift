@@ -30,11 +30,11 @@ final class ContactsViewModelTests: XCTestCase {
         let zoneValidation = "\(testClient.zZone)\(validation.family)"
         viewModel.getContacts()
         do {
-            let model: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
-            let nnn = model
-//            XCTAssert(model.contact.familyName == zoneValidation)
-//            XCTAssert(model.familyName == validation.family)
-//            XCTAssert(model.givenName == validation.given)
+            let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            let model = models![0]
+            XCTAssert(model.contact.familyName == zoneValidation)
+            XCTAssert(model.familyName == validation.family)
+            XCTAssert(model.givenName == validation.given)
         } catch {
             XCTAssert(false)
         }
