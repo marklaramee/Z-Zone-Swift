@@ -24,8 +24,22 @@ final class ContactsViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testGetContacts_HasCorrectDisplayNameFamily() throws {
-        testClient.generateContacts(normal: 0, zone: 1, sortOrder: .familyName)
+    func testGetContacts_hasCorrectDisplayName_normal() throws {
+        testClient.generateContacts(normal: 1, zone: 0)
+        let validation: TestData = testClient.testData[0]
+        viewModel.getContacts()
+        do {
+            let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            let model = models![0]
+            XCTAssert(model.contact.familyName == validation.family)
+            XCTAssert(model.fullName == "\(validation.family), \(validation.given)")
+        } catch {
+            XCTAssert(false)
+        }
+    }
+    
+    func testGetContacts_hasCorrectDisplayName_zZone() throws {
+        testClient.generateContacts(normal: 0, zone: 1)
         let validation: TestData = testClient.testData[0]
         let zoneValidation = "\(testClient.zZone)\(validation.family)"
         viewModel.getContacts()
@@ -36,14 +50,6 @@ final class ContactsViewModelTests: XCTestCase {
             XCTAssert(model.fullName == "\(validation.family), \(validation.given)")
         } catch {
             XCTAssert(false)
-        }
-        
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
         }
     }
 

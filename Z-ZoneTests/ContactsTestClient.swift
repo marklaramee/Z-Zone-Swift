@@ -37,7 +37,7 @@ class ContactsTestClient: ContactsClient {
         completion(testContacts)
     }
     
-    func generateContacts(normal: Int, zone: Int, sortOrder: ContactNameSort) {
+    func generateContacts(normal: Int, zone: Int) {
         testContacts = []
         
         if normal > 0 {
@@ -48,10 +48,12 @@ class ContactsTestClient: ContactsClient {
             }
         }
         
-        for jjj in (testContacts.count + 1)...zone {
-            let data = testData[jjj - 1]
-            let contact = generateContact(given: data.given, family: data.family, isZone: true, sortOrder: sortOrder)
-            testContacts.append(contact)
+        if zone > 0 {
+            for jjj in (testContacts.count + 1)...(zone + testContacts.count + 1) {
+                let data = testData[jjj - 1]
+                let contact = generateContact(given: data.given, family: data.family, isZone: true, sortOrder: sortOrder)
+                testContacts.append(contact)
+            }
         }
     }
     
