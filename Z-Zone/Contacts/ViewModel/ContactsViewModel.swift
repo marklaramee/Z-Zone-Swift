@@ -40,7 +40,8 @@ class ContactsViewModel {
                 
                 return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: self.convertToFullName(cnContact), contact: cnContact, isZZone: isZone)
             }
-            self.contactsRelay.accept(model)
+            let sortedContacts = model.sorted{ $0.fullName < $1.fullName}
+            self.contactsRelay.accept(sortedContacts)
         }
     }
     
@@ -97,7 +98,7 @@ class ContactsViewModel {
     private func convertToFullName(_ contact: CNContact) -> String {
         switch (ContactsClient.shared.sortOrder) {
         case .familyName:
-            return "\(contact.familyName.removeIfPresent(zZone)) \(contact.givenName)".trimmingCharacters(in: .whitespacesAndNewlines)
+            return "\(contact.familyName.removeIfPresent(zZone)), \(contact.givenName)".trimmingCharacters(in: .whitespacesAndNewlines)
         case .givenName:
             return "\(contact.givenName.removeIfPresent(zZone)) \(contact.familyName)".trimmingCharacters(in: .whitespacesAndNewlines)
         }

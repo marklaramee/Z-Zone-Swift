@@ -25,20 +25,20 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJQ-nl-z04" userLabel="Containing View">
                                                 <rect key="frame" x="16" y="32" width="361" height="600"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z-Zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-Jo-9sl">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Z-Zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-Jo-9sl">
                                                         <rect key="frame" x="0.0" y="35" width="361" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How It Works" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-s7-BeM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How It Works" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-s7-BeM">
                                                         <rect key="frame" x="16" y="72" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBY-BL-4xY" customClass="VerticalAlignLabel" customModule="Z_Zone" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="109" width="361" height="400"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBY-BL-4xY" userLabel="FAQ View" customClass="VerticalAlignLabel" customModule="Z_Zone" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="160" width="361" height="400"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="400" id="yv4-7u-UZ2"/>
                                                         </constraints>
@@ -59,6 +59,7 @@ The Z-Zone app makes it easy to add and remove contacts from your Z-Zone. Simply
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="dBY-BL-4xY" secondAttribute="bottom" constant="40" id="0o5-QN-ind"/>
                                                     <constraint firstAttribute="height" constant="600" id="1YZ-4Q-4hB"/>
                                                     <constraint firstItem="bGh-Jo-9sl" firstAttribute="top" secondItem="wJQ-nl-z04" secondAttribute="top" constant="35" id="2yV-dA-i7a"/>
                                                     <constraint firstAttribute="trailing" secondItem="lbw-s7-BeM" secondAttribute="trailing" constant="16" id="3Iv-Ay-7W8"/>
