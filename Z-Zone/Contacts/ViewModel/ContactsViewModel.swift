@@ -39,8 +39,6 @@ class ContactsViewModel {
                 }
                 
                 return ContactModel(
-                    givenName: cnContact.givenName.removeIfPresent(self.zZone),
-                    familyName: cnContact.familyName.removeIfPresent(self.zZone),
                     fullName: self.convertToFullName(cnContact),
                     contact: cnContact,
                     isZZone: isZone)

@@ -33,8 +33,7 @@ final class ContactsViewModelTests: XCTestCase {
             let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
             let model = models![0]
             XCTAssert(model.contact.familyName == zoneValidation)
-            XCTAssert(model.familyName == validation.family)
-            XCTAssert(model.givenName == validation.given)
+            XCTAssert(model.fullName == "\(validation.family), \(validation.given)")
         } catch {
             XCTAssert(false)
         }
