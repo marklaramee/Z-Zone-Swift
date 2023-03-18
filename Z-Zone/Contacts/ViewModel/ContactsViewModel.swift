@@ -30,10 +30,6 @@ class ContactsViewModel {
             let cnContacts: [CNContact] = contacts
             
             let model: [ContactModel] = cnContacts.compactMap { cnContact in
-                guard let fullName = self.convertToFullName(cnContact) else {
-                    return nil
-                }
-                
                 var isZone = false;
                 switch(ContactsClient.shared.sortOrder) {
                 case .familyName:
@@ -42,7 +38,7 @@ class ContactsViewModel {
                     isZone = cnContact.givenName.hasPrefix(self.zZone)
                 }
                 
-                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: fullName, contact: cnContact, isZZone: isZone)
+                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: self.convertToFullName(cnContact), contact: cnContact, isZZone: isZone)
             }
             self.contactsRelay.accept(model)
         }
@@ -88,6 +84,7 @@ class ContactsViewModel {
         
         contactModel.isZZone = false
         contactModel.contact = mutableContact
+        contactModel.fullName = convertToFullName(mutableContact)
         
         // update the behavior relay
         var contacts = contactsRelay.value
@@ -97,12 +94,12 @@ class ContactsViewModel {
         contactsRelay.accept(contacts)
     }
     
-    private func convertToFullName(_ contact: CNContact) -> String? {
+    private func convertToFullName(_ contact: CNContact) -> String {
         switch (ContactsClient.shared.sortOrder) {
         case .familyName:
-            return "\(contact.familyName) \(contact.givenName)".trimmingCharacters(in: .whitespacesAndNewlines)
+            return "\(contact.familyName.removeIfPresent(zZone)) \(contact.givenName)".trimmingCharacters(in: .whitespacesAndNewlines)
         case .givenName:
-            return "\(contact.givenName) \(contact.familyName)".trimmingCharacters(in: .whitespacesAndNewlines)
+            return "\(contact.givenName.removeIfPresent(zZone)) \(contact.familyName)".trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
 }
