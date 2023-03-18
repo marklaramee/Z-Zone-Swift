@@ -9,7 +9,7 @@ import Foundation
 import Contacts
 
 // TODO: remove nillable?
-struct ContactModel {
+struct ContactModel: Equatable {
     var givenName: String
     var familyName: String
     var fullName: String

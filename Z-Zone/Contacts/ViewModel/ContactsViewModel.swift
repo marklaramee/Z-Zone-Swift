@@ -48,9 +48,9 @@ class ContactsViewModel {
         }
     }
     
-    func enterZZone(_ contactModel: ContactModel) {
-        guard let mutableContact = contactModel.contact.mutableCopy() as? CNMutableContact else {
-            ZLogger.shared.logError("Could not get mutable contact.", category: .contactsViewModel)
+    func enterZZone(_ contactModel: inout ContactModel) {
+        guard !contactModel.isZZone, let mutableContact = contactModel.contact.mutableCopy() as? CNMutableContact else {
+            // ZLogger.shared.logError("Could not get mutable contact.", category: .contactsViewModel)
             return
         }
         switch ContactsClient.shared.sortOrder {
@@ -60,6 +60,17 @@ class ContactsViewModel {
             mutableContact.givenName = mutableContact.givenName.prependIfNotPresent(zZone)
         }
         ContactsClient.shared.updateContact(mutableContact)
+        
+        contactModel.isZZone = true
+        contactModel.contact = mutableContact
+        
+        // update the behavior relay
+        var contacts = contactsRelay.value
+        if let index = contacts.firstIndex(where: { $0.contact ==== contactModel.contact }) {
+            contacts[index] = contactModel
+        }
+        contactsRelay.accept(contacts)
+        
     }
     
     func leaveZZone(_ contact: ContactModel) {
