@@ -58,7 +58,7 @@ class ContactsClient {
             try store.execute(saveRequest)
             ZLogger.shared.log(level: .info, message: "Contact saved successfully", category: .contactsClient)
         } catch {
-            print("Error saving contact: \(error.localizedDescription)")
+            ZLogger.shared.logError("Error saving contact: \(error.localizedDescription)", category: .contactsClient)
         }
     }
 }
