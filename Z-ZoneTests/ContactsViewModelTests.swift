@@ -7,6 +7,7 @@
 
 import XCTest
 import Contacts
+import RxBlocking
 @testable import Z_Zone
 
 final class ContactsViewModelTests: XCTestCase {
@@ -24,7 +25,17 @@ final class ContactsViewModelTests: XCTestCase {
 
     func testGetContacts_HasCorrectDisplayNameFamily() throws {
         testClient.generateContacts(normal: 0, zone: 1, sortOrder: .familyName)
-        let validation = testClient.testData[0]
+        let validation: TestData = testClient.testData[0]
+        let zoneValidation = "\(testClient.zZone)\(validation.family)"
+        viewModel.getContacts()
+        do {
+            let model: ContactModel = try viewModel.contactsRelay.toBlocking().first()![0]
+            XCTAssert(model.contact.familyName == zoneValidation)
+            XCTAssert(model.familyName == validation.family)
+            XCTAssert(model.givenName == validation.given)
+        } catch {
+            XCTAssert(false)
+        }
         
     }
 
