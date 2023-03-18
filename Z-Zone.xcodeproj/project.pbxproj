@@ -16,6 +16,10 @@
 		252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474329BABAAF00AD12E8 /* ContactsViewController.swift */; };
 		252E474629BABAD500AD12E8 /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */; };
 		252E474929BABAFF00AD12E8 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474829BABAFF00AD12E8 /* ContactsViewModel.swift */; };
+		25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377229C51A74007BA6D2 /* ZLogger.swift */; };
+		25B1377529C51B78007BA6D2 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377429C51B78007BA6D2 /* String+Additions.swift */; };
+		25B1377729C53720007BA6D2 /* CNContact+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377629C53720007BA6D2 /* CNContact+Additions.swift */; };
+		25B1377929C54804007BA6D2 /* VerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377829C54804007BA6D2 /* VerticalAlignLabel.swift */; };
 		25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D3297364BA00C62781 /* AppDelegate.swift */; };
 		25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D5297364BA00C62781 /* SceneDelegate.swift */; };
 		25D7B9D8297364BA00C62781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D7297364BA00C62781 /* ViewController.swift */; };
@@ -63,6 +67,10 @@
 		252E474329BABAAF00AD12E8 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNavigationController.swift; sourceTree = "<group>"; };
 		252E474829BABAFF00AD12E8 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		25B1377229C51A74007BA6D2 /* ZLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLogger.swift; sourceTree = "<group>"; };
+		25B1377429C51B78007BA6D2 /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		25B1377629C53720007BA6D2 /* CNContact+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNContact+Additions.swift"; sourceTree = "<group>"; };
+		25B1377829C54804007BA6D2 /* VerticalAlignLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignLabel.swift; sourceTree = "<group>"; };
 		25D7B9D0297364BA00C62781 /* Z-Zone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Z-Zone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D7B9D3297364BA00C62781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25D7B9D5297364BA00C62781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,12 +135,12 @@
 			path = Contacts;
 			sourceTree = "<group>";
 		};
-		252E473229BAA34800AD12E8 /* info */ = {
+		252E473229BAA34800AD12E8 /* Info */ = {
 			isa = PBXGroup;
 			children = (
 				252E473329BAA35C00AD12E8 /* View */,
 			);
-			path = info;
+			path = Info;
 			sourceTree = "<group>";
 		};
 		252E473329BAA35C00AD12E8 /* View */ = {
@@ -148,9 +156,11 @@
 		252E473A29BAA43D00AD12E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				252E473B29BAA45B00AD12E8 /* UIViewController+Additions.swift */,
 				25EFD6F329BC737500F816B5 /* Array+Additions.swift */,
 				25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */,
+				25B1377429C51B78007BA6D2 /* String+Additions.swift */,
+				252E473B29BAA45B00AD12E8 /* UIViewController+Additions.swift */,
+				25B1377629C53720007BA6D2 /* CNContact+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +168,9 @@
 		252E473D29BAA52900AD12E8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				25D7B9DF297364BD00C62781 /* Assets.xcassets */,
+				25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */,
+				25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */,
 				25D7B9D3297364BA00C62781 /* AppDelegate.swift */,
 				25D7B9D5297364BA00C62781 /* SceneDelegate.swift */,
 				252E472F29BAA01200AD12E8 /* Main.storyboard */,
@@ -183,6 +196,15 @@
 				252E474829BABAFF00AD12E8 /* ContactsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25B1377129C51A0B007BA6D2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				25B1377229C51A74007BA6D2 /* ZLogger.swift */,
+				25B1377829C54804007BA6D2 /* VerticalAlignLabel.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		25D7B9C7297364BA00C62781 = {
@@ -213,12 +235,10 @@
 				252E473129BAA33E00AD12E8 /* Contacts */,
 				252E473D29BAA52900AD12E8 /* Core */,
 				252E473A29BAA43D00AD12E8 /* Extensions */,
-				252E473229BAA34800AD12E8 /* info */,
+				252E473229BAA34800AD12E8 /* Info */,
 				25D7B9D7297364BA00C62781 /* ViewController.swift */,
-				25D7B9DF297364BD00C62781 /* Assets.xcassets */,
-				25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */,
 				25D7B9E4297364BD00C62781 /* Info.plist */,
-				25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */,
+				25B1377129C51A0B007BA6D2 /* Utility */,
 			);
 			path = "Z-Zone";
 			sourceTree = "<group>";
@@ -486,11 +506,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B1377929C54804007BA6D2 /* VerticalAlignLabel.swift in Sources */,
 				25EFD6F429BC737500F816B5 /* Array+Additions.swift in Sources */,
 				25EFD6F829BC77EC00F816B5 /* NSAttributedString+Additions.swift in Sources */,
 				25EFD6EB29BC5DFA00F816B5 /* ContactsClient.swift in Sources */,
 				252E474629BABAD500AD12E8 /* ContactsNavigationController.swift in Sources */,
 				252E474929BABAFF00AD12E8 /* ContactsViewModel.swift in Sources */,
+				25B1377729C53720007BA6D2 /* CNContact+Additions.swift in Sources */,
 				25D7B9DE297364BA00C62781 /* Z_Zone.xcdatamodeld in Sources */,
 				252E473C29BAA45B00AD12E8 /* UIViewController+Additions.swift in Sources */,
 				252E473929BAA40500AD12E8 /* InfoNavigationController.swift in Sources */,
@@ -498,7 +520,9 @@
 				25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */,
 				25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */,
 				25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */,
+				25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */,
 				252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */,
+				25B1377529C51B78007BA6D2 /* String+Additions.swift in Sources */,
 				25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */,
 				25EFD6EE29BC687200F816B5 /* ContactModel.swift in Sources */,
 				252E473729BAA3B000AD12E8 /* InfoViewController.swift in Sources */,
@@ -671,6 +695,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Z-Zone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -699,6 +724,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Z-Zone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

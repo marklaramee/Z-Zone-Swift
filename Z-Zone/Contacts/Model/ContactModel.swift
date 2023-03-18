@@ -8,18 +8,22 @@
 import Foundation
 import Contacts
 
-struct ContactModel {
-    var firstName: String?
-    var lastName: String?
+// TODO: remove nillable?
+struct ContactModel: Equatable {
+    var givenName: String
+    var familyName: String
+    var fullName: String
     var contact: CNContact
+    var isZZone: Bool
 }
 
+// TODO: remove?
 enum ContactDisplayType {
     case rawStyle
     case zStyle
 }
 
 enum ContactNameSort {
-    case firstNameFirst
-    case lastNameFirst
+    case givenName
+    case familyName
 }

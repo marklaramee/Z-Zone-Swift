@@ -12,11 +12,9 @@ import RxSwift
 import RxRelay
 
 class ContactsViewModel {
-    
+    let zZone = "zzz"
     var client: ContactsClient?
-
     var contactsRelay: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
-
     var displayType = ContactDisplayType.rawStyle
     
     init(client: ContactsClient) {
@@ -30,23 +28,79 @@ class ContactsViewModel {
                 return
             }
             let cnContacts: [CNContact] = contacts
-            
-            // TODO: do I need to adjust this for other naming styles? maybe use the CnContact prop names
-            let model: [ContactModel] = cnContacts.map { cnContact in
-                return ContactModel(firstName: cnContact.givenName, lastName: cnContact.familyName, contact: cnContact)
+
+            let model: [ContactModel] = cnContacts.compactMap { cnContact in
+                var isZone = false;
+                switch(ContactsClient.shared.sortOrder) {
+                case .familyName:
+                    isZone = cnContact.familyName.hasPrefix(self.zZone)
+                case .givenName:
+                    isZone = cnContact.givenName.hasPrefix(self.zZone)
+                }
+                
+                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: self.convertToFullName(cnContact), contact: cnContact, isZZone: isZone)
             }
-            self.contactsRelay.accept(model)
+            let sortedContacts = model.sorted{ $0.fullName < $1.fullName}
+            self.contactsRelay.accept(sortedContacts)
         }
     }
     
-    func convertToFullName(_ contact: ContactModel, as asType: ContactNameSort) -> String {
-        let firstName = contact.firstName ?? ""
-        let lastName = contact.lastName ?? ""
-        switch (asType) {
-        case .firstNameFirst:
-            return "\(firstName) \(lastName)".trimmingCharacters(in: .whitespacesAndNewlines)
-        case .lastNameFirst:
-            return "\(lastName) \(firstName)".trimmingCharacters(in: .whitespacesAndNewlines)
+    func enterZZone(_ contactModel: inout ContactModel) {
+        guard !contactModel.isZZone, let mutableContact = contactModel.contact.mutableCopy() as? CNMutableContact else {
+            // ZLogger.shared.logError("Could not get mutable contact.", category: .contactsViewModel)
+            return
+        }
+        switch ContactsClient.shared.sortOrder {
+        case .familyName:
+            mutableContact.familyName = mutableContact.familyName.prependIfNotPresent(zZone)
+        case .givenName:
+            mutableContact.givenName = mutableContact.givenName.prependIfNotPresent(zZone)
+        }
+        ContactsClient.shared.updateContact(mutableContact)
+        
+        contactModel.isZZone = true
+        contactModel.contact = mutableContact
+        
+        // update the behavior relay
+        var contacts = contactsRelay.value
+        if let index = contacts.firstIndex(where: { $0.contact ==== contactModel.contact }) {
+            contacts[index] = contactModel
+        }
+        contactsRelay.accept(contacts)
+        
+    }
+    
+    func leaveZZone(_ contactModel: inout ContactModel) {
+        guard contactModel.isZZone, let mutableContact = contactModel.contact.mutableCopy() as? CNMutableContact else {
+            // ZLogger.shared.logError("Could not get mutable contact.", category: .contactsViewModel)
+            return
+        }
+        switch ContactsClient.shared.sortOrder {
+        case .familyName:
+            mutableContact.familyName = mutableContact.familyName.removeIfPresent(zZone)
+        case .givenName:
+            mutableContact.givenName = mutableContact.givenName.removeIfPresent(zZone)
+        }
+        ContactsClient.shared.updateContact(mutableContact)
+        
+        contactModel.isZZone = false
+        contactModel.contact = mutableContact
+        contactModel.fullName = convertToFullName(mutableContact)
+        
+        // update the behavior relay
+        var contacts = contactsRelay.value
+        if let index = contacts.firstIndex(where: { $0.contact ==== contactModel.contact }) {
+            contacts[index] = contactModel
+        }
+        contactsRelay.accept(contacts)
+    }
+    
+    private func convertToFullName(_ contact: CNContact) -> String {
+        switch (ContactsClient.shared.sortOrder) {
+        case .familyName:
+            return "\(contact.familyName.removeIfPresent(zZone)), \(contact.givenName)".trimmingCharacters(in: .whitespacesAndNewlines)
+        case .givenName:
+            return "\(contact.givenName.removeIfPresent(zZone)) \(contact.familyName)".trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
 }

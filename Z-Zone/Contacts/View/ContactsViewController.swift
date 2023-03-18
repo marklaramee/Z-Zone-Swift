@@ -84,11 +84,23 @@ class ContactsViewController: UIViewController {
 // MARK: - UITableViewDelegate
 extension ContactsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? RawStyleTableViewCell else {
-            return
-        }
+//        guard let cell = tableView.cellForRow(at: indexPath) as? RawStyleTableViewCell else {
+//            return
+//        }
 
         // TODO: handle order tapped
+        guard var contact = viewModel.contactsRelay.value[safe: indexPath.row] else {
+            ZLogger.shared.logError("Could not get contact", category: .contactsViewController)
+            return
+        }
+        
+        switch(contact.isZZone) {
+        case true:
+            viewModel.leaveZZone(&contact)
+        case false:
+            viewModel.enterZZone(&contact)
+        }
+
     }
 }
 
@@ -103,7 +115,7 @@ extension ContactsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RawStyleTableViewCell", for: indexPath) as? RawStyleTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ZStyleTableViewCell", for: indexPath) as? ZStyleTableViewCell else {
             return UITableViewCell()
         }
         
@@ -112,8 +124,7 @@ extension ContactsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let nameString = viewModel.convertToFullName(contact, as: .firstNameFirst)
-        cell.set(nameString)
+        cell.set(contact)
         
         return cell
     }
