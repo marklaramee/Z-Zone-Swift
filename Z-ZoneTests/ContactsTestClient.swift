@@ -37,26 +37,28 @@ class ContactsTestClient: ContactsClient {
         completion(testContacts)
     }
     
-    func generateContacts(normal: Int, zone: Int, sortOrder: ContactNameSort) {
+    func generateContacts(normal: Int, zone: Int) {
         testContacts = []
         
         if normal > 0 {
             for iii in 1...normal {
                 let data = testData[iii - 1]
-                let contact = generateContact(given: data.given, family: data.family, isZone: false, sortOrder: sortOrder)
+                let contact = generateContact(given: data.given, family: data.family, isZone: false)
                 testContacts.append(contact)
             }
         }
         
-        for jjj in (testContacts.count + 1)...zone {
-            let data = testData[jjj - 1]
-            let contact = generateContact(given: data.given, family: data.family, isZone: true, sortOrder: sortOrder)
-            testContacts.append(contact)
+        if zone > 0 {
+            for jjj in (testContacts.count + 1)...(zone + testContacts.count + 1) {
+                let data = testData[jjj - 1]
+                let contact = generateContact(given: data.given, family: data.family, isZone: true)
+                testContacts.append(contact)
+            }
         }
     }
     
-    private func generateContact(given: String, family: String, isZone: Bool, sortOrder: ContactNameSort) -> CNContact {
-        guard var mutableContact = CNContact().mutableCopy() as? CNMutableContact else {
+    func generateContact(given: String, family: String, isZone: Bool) -> CNContact {
+        guard let mutableContact = CNContact().mutableCopy() as? CNMutableContact else {
             return CNContact()
         }
         mutableContact.givenName = given
