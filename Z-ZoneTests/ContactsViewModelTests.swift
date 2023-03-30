@@ -65,20 +65,73 @@ final class ContactsViewModelTests: XCTestCase {
         }
     }
     
-//    func testEnterZone_updates() throws {
-//        let normalContact = testClient.generateContact(given: "Given", family: "Family", isZone: false)
-//    }
-//    
-//    func testEnterZone_doesNotUpdaate() throws {
-//        
-//    }
-//    
-//    func testLeaveZone_updates() throws {
-//        
-//    }
-//    
-//    func testLeaveZone_doesNotUpdaate() throws {
-//        
-//    }
+    func testEnterZone_updates() throws {
+        testClient.generateContacts(normal: 1, zone: 0)
+        let validation: TestData = testClient.testData[0]
+        viewModel.getContacts()
+        do {
+            let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            var model = models![0]
+            viewModel.enterZZone(&model)
+            let zoneModels: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            let zoneModel = zoneModels![0]
+            XCTAssert(zoneModel.fullName == model.fullName)
+            XCTAssert(zoneModel.contact.familyName == "\(testClient.zZone)\(validation.family)")
+        } catch {
+            XCTAssert(false)
+        }
+    }
+    
+    func testEnterZone_doesNotUpdaate() throws {
+        testClient.generateContacts(normal: 0, zone: 1)
+        let validation: TestData = testClient.testData[0]
+        viewModel.getContacts()
+        do {
+            let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            var model = models![0]
+            viewModel.enterZZone(&model)
+            let zoneModels: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            let zoneModel = zoneModels![0]
+            XCTAssert(zoneModel.fullName == model.fullName)
+            XCTAssert(zoneModel.contact.familyName == "\(testClient.zZone)\(validation.family)")
+        } catch {
+            XCTAssert(false)
+        }
+    }
+    
+    func testLeaveZone_updates() throws {
+        testClient.generateContacts(normal: 0, zone: 1)
+        let validation: TestData = testClient.testData[0]
+        viewModel.getContacts()
+        do {
+            let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            var model = models![0]
+            viewModel.leaveZZone(&model)
+            let zoneModels: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            let zoneModel = zoneModels![0]
+            XCTAssert(zoneModel.fullName == model.fullName)
+            XCTAssert(zoneModel.contact.familyName == validation.family)
+        } catch {
+            XCTAssert(false)
+        }
+    }
+    
+    // TODO: possibly delete or change this. Not sure it tests anything
+    func testLeaveZone_doesNotUpdate() throws {
+        testClient.generateContacts(normal: 1, zone: 0)
+        let validation: TestData = testClient.testData[0]
+        viewModel.getContacts()
+        do {
+            let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            var model = models![0]
+            viewModel.leaveZZone(&model)
+            let zoneModels: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
+            let zoneModel = zoneModels![0]
+            XCTAssert(zoneModel.fullName == model.fullName)
+            XCTAssert(zoneModel.contact.familyName == validation.family)
+        } catch {
+            XCTAssert(false)
+        }
+    }
 
 }

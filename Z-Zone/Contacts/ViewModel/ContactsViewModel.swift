@@ -48,6 +48,7 @@ class ContactsViewModel {
         }
     }
     
+    // TODO: remove inout
     func enterZZone(_ contactModel: inout ContactModel) {
         guard !contactModel.isZZone, let mutableContact = contactModel.contact.mutableCopy() as? CNMutableContact else {
             // ZLogger.shared.logError("Could not get mutable contact.", category: .contactsViewModel)

@@ -38,6 +38,14 @@
 		25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */; };
 		25EFD6F429BC737500F816B5 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F329BC737500F816B5 /* Array+Additions.swift */; };
 		25EFD6F829BC77EC00F816B5 /* NSAttributedString+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */; };
+		25F7BAD829D5606C005817D4 /* Almarai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */; };
+		25F7BAD929D5606C005817D4 /* Almarai-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD229D5606B005817D4 /* Almarai-ExtraBold.ttf */; };
+		25F7BADA29D5606C005817D4 /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD329D5606B005817D4 /* TitanOne-Regular.ttf */; };
+		25F7BADB29D5606C005817D4 /* Almarai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */; };
+		25F7BADC29D5606C005817D4 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */; };
+		25F7BADD29D5606C005817D4 /* Almarai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD629D5606C005817D4 /* Almarai-Bold.ttf */; };
+		25F7BADE29D5606C005817D4 /* Murecho-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */; };
+		25F7BAE029D5609A005817D4 /* UIFont+ZFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */; };
 		E3CF0E670D9A0FA1ECE5A78B /* Pods_Z_ZoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAFAE9E0590415F8B573FB6 /* Pods_Z_ZoneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +101,14 @@
 		25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawStyleTableViewCell.swift; sourceTree = "<group>"; };
 		25EFD6F329BC737500F816B5 /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 		25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Additions.swift"; sourceTree = "<group>"; };
+		25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Regular.ttf"; sourceTree = "<group>"; };
+		25F7BAD229D5606B005817D4 /* Almarai-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-ExtraBold.ttf"; sourceTree = "<group>"; };
+		25F7BAD329D5606B005817D4 /* TitanOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitanOne-Regular.ttf"; sourceTree = "<group>"; };
+		25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Light.ttf"; sourceTree = "<group>"; };
+		25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
+		25F7BAD629D5606C005817D4 /* Almarai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Bold.ttf"; sourceTree = "<group>"; };
+		25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Murecho-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ZFonts.swift"; sourceTree = "<group>"; };
 		33FFDA42B31F31A196B8FAF7 /* Pods-Z-Zone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-Zone.debug.xcconfig"; path = "Target Support Files/Pods-Z-Zone/Pods-Z-Zone.debug.xcconfig"; sourceTree = "<group>"; };
 		5E7C063C87F7103C80C07E56 /* Pods-Z-Zone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-Zone.release.xcconfig"; path = "Target Support Files/Pods-Z-Zone/Pods-Z-Zone.release.xcconfig"; sourceTree = "<group>"; };
 		B21B4FAB6F0DE46244B254F1 /* Pods-Z-ZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-ZoneTests.release.xcconfig"; path = "Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +182,7 @@
 				25B1377429C51B78007BA6D2 /* String+Additions.swift */,
 				252E473B29BAA45B00AD12E8 /* UIViewController+Additions.swift */,
 				25B1377629C53720007BA6D2 /* CNContact+Additions.swift */,
+				25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,6 +257,7 @@
 				252E473129BAA33E00AD12E8 /* Contacts */,
 				252E473D29BAA52900AD12E8 /* Core */,
 				252E473A29BAA43D00AD12E8 /* Extensions */,
+				25F7BAD029D55FA9005817D4 /* Fonts */,
 				252E473229BAA34800AD12E8 /* Info */,
 				25D7B9D7297364BA00C62781 /* ViewController.swift */,
 				25D7B9E4297364BD00C62781 /* Info.plist */,
@@ -272,6 +290,20 @@
 				25EFD6ED29BC687200F816B5 /* ContactModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		25F7BAD029D55FA9005817D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				25F7BAD629D5606C005817D4 /* Almarai-Bold.ttf */,
+				25F7BAD229D5606B005817D4 /* Almarai-ExtraBold.ttf */,
+				25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */,
+				25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */,
+				25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */,
+				25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */,
+				25F7BAD329D5606B005817D4 /* TitanOne-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		3A65D9488561052D8088DEB2 /* Frameworks */ = {
@@ -404,10 +436,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				252E473029BAA01200AD12E8 /* Main.storyboard in Resources */,
+				25F7BADA29D5606C005817D4 /* TitanOne-Regular.ttf in Resources */,
+				25F7BADC29D5606C005817D4 /* Righteous-Regular.ttf in Resources */,
+				25F7BAD929D5606C005817D4 /* Almarai-ExtraBold.ttf in Resources */,
 				25D7B9E3297364BD00C62781 /* LaunchScreen.storyboard in Resources */,
+				25F7BADD29D5606C005817D4 /* Almarai-Bold.ttf in Resources */,
+				25F7BADB29D5606C005817D4 /* Almarai-Light.ttf in Resources */,
 				252E474229BABA9800AD12E8 /* Contacts.storyboard in Resources */,
 				252E473529BAA36A00AD12E8 /* Info.storyboard in Resources */,
 				25D7B9E0297364BD00C62781 /* Assets.xcassets in Resources */,
+				25F7BAD829D5606C005817D4 /* Almarai-Regular.ttf in Resources */,
+				25F7BADE29D5606C005817D4 /* Murecho-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +558,7 @@
 				25EFD6EB29BC5DFA00F816B5 /* ContactsClient.swift in Sources */,
 				252E474629BABAD500AD12E8 /* ContactsNavigationController.swift in Sources */,
 				252E474929BABAFF00AD12E8 /* ContactsViewModel.swift in Sources */,
+				25F7BAE029D5609A005817D4 /* UIFont+ZFonts.swift in Sources */,
 				25B1377729C53720007BA6D2 /* CNContact+Additions.swift in Sources */,
 				25D7B9DE297364BA00C62781 /* Z_Zone.xcdatamodeld in Sources */,
 				252E473C29BAA45B00AD12E8 /* UIViewController+Additions.swift in Sources */,
