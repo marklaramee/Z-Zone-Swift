@@ -24,7 +24,8 @@ class ZStyleTableViewCell: UITableViewCell {
     }
     
     func set(_ contact: ContactModel) {
-        nameLabel.text = contact.fullName
+        let nameString = NSMutableAttributedString(zString: contact.fullName, size: 18, style: .regular)
+        nameLabel.attributedText = nameString
         
         if contact.isZZone {
             zImageView.isHidden = false

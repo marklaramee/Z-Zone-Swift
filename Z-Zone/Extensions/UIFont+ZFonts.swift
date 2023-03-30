@@ -12,6 +12,8 @@ extension UIFont {
 
     /// creates an Almarai font of the given style
     convenience init(zStyle: ZFontStyle, size: CGFloat) {
+        let nnn = zStyle.fontName
+        let ooo = nnn
         self.init(name: zStyle.fontName, size: size)!
     }
 
