@@ -27,9 +27,9 @@ class ZStyleTableViewCell: UITableViewCell {
         nameLabel.text = contact.fullName
         
         if contact.isZZone {
-            zImageView.image = UIImage(named: "purple-temp")
+            zImageView.isHidden = false
         } else {
-            zImageView.image = nil
+            zImageView.isHidden = true
         }
     }
 
