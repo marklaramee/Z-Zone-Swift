@@ -42,6 +42,7 @@ final class ContactsViewModelTests: XCTestCase {
         testClient.generateContacts(normal: 0, zone: 1)
         let validation: TestData = testClient.testData[0]
         let zoneValidation = "\(testClient.zZone)\(validation.family)"
+        
         viewModel.getContacts()
         do {
             let models: [ContactModel]? = try viewModel.contactsRelay.toBlocking().first()
@@ -131,15 +132,6 @@ final class ContactsViewModelTests: XCTestCase {
             XCTAssert(zoneModel.contact.familyName == validation.family)
         } catch {
             XCTAssert(false)
-=======
-        
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
->>>>>>> main
         }
     }
 
