@@ -16,6 +16,10 @@ class ContactsViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var contactsTableView: UITableView!
+    @IBOutlet weak var headerLabel: UILabel!
+    
+    // localization
+    let headerText = "Contacts"
     
     static func newInstance() -> ContactsViewController {
         let viewController = buildFromStoryboard("Contacts") as ContactsViewController
@@ -32,6 +36,10 @@ class ContactsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let headerString = NSMutableAttributedString(
+            zString: headerText, size: 24, style: .extraBold, color: UIColor.ZZone.purple ,isAllCaps: true)
+        headerLabel.attributedText = headerString
         
         contactsTableView.delegate = self
         contactsTableView.dataSource = self
