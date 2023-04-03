@@ -14,6 +14,7 @@ class ContactsViewController: UIViewController {
     let viewModel = ContactsViewModel(client: ContactsClient.shared)
     var contacts: [ContactModel] = []
     let disposeBag = DisposeBag()
+    let cellHeight: CGFloat = 36
     
     @IBOutlet weak var contactsTableView: UITableView!
     @IBOutlet weak var headerLabel: UILabel!
@@ -117,7 +118,7 @@ extension ContactsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 36
+        return cellHeight
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
