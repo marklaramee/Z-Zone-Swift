@@ -39,33 +39,8 @@
                                 <rect key="frame" x="0.0" y="124" width="393" height="728"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RawStyleTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RawStyleTableViewCell" id="MK1-Fn-Qc7" customClass="RawStyleTableViewCell" customModule="Z_Zone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MK1-Fn-Qc7" id="6NQ-KN-ia7">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raw Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6h-8q-Hy9">
-                                                    <rect key="frame" x="16" y="12" width="361" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="J6h-8q-Hy9" firstAttribute="top" secondItem="6NQ-KN-ia7" secondAttribute="top" constant="12" id="1fo-iF-fES"/>
-                                                <constraint firstAttribute="trailing" secondItem="J6h-8q-Hy9" secondAttribute="trailing" constant="16" id="drF-XG-Rja"/>
-                                                <constraint firstItem="J6h-8q-Hy9" firstAttribute="leading" secondItem="6NQ-KN-ia7" secondAttribute="leading" constant="16" id="lKJ-xt-Mdl"/>
-                                                <constraint firstAttribute="bottom" secondItem="J6h-8q-Hy9" secondAttribute="bottom" constant="12" id="xo5-c1-RNZ"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameLabel" destination="J6h-8q-Hy9" id="YPE-DO-EKK"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ZStyleTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ZStyleTableViewCell" rowHeight="36" id="hI7-JS-YtI" userLabel="ZStyle Table View Cell" customClass="ZStyleTableViewCell" customModule="Z_Zone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="393" height="36"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hI7-JS-YtI" id="5ob-bX-kXb">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="36"/>
