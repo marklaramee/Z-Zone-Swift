@@ -34,7 +34,6 @@
 		25EFD6EB29BC5DFA00F816B5 /* ContactsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6EA29BC5DFA00F816B5 /* ContactsClient.swift */; };
 		25EFD6EE29BC687200F816B5 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6ED29BC687200F816B5 /* ContactModel.swift */; };
 		25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */; };
-		25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */; };
 		25EFD6F429BC737500F816B5 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F329BC737500F816B5 /* Array+Additions.swift */; };
 		25EFD6F829BC77EC00F816B5 /* NSAttributedString+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */; };
 		25F7BAD829D5606C005817D4 /* Almarai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */; };
@@ -101,7 +100,6 @@
 		25EFD6EA29BC5DFA00F816B5 /* ContactsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsClient.swift; sourceTree = "<group>"; };
 		25EFD6ED29BC687200F816B5 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStyleTableViewCell.swift; sourceTree = "<group>"; };
-		25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawStyleTableViewCell.swift; sourceTree = "<group>"; };
 		25EFD6F329BC737500F816B5 /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 		25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Additions.swift"; sourceTree = "<group>"; };
 		25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Regular.ttf"; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 				252E474329BABAAF00AD12E8 /* ContactsViewController.swift */,
 				252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */,
 				25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */,
-				25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -569,7 +566,6 @@
 				252E473929BAA40500AD12E8 /* InfoNavigationController.swift in Sources */,
 				25D7B9D8297364BA00C62781 /* ViewController.swift in Sources */,
 				25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */,
-				25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */,
 				25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */,
 				25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */,
 				252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */,
