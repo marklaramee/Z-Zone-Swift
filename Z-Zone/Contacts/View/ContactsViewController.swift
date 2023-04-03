@@ -44,6 +44,8 @@ class ContactsViewController: UIViewController {
         
         contactsTableView.delegate = self
         contactsTableView.dataSource = self
+        contactsTableView.layoutMargins = UIEdgeInsets.zero
+        contactsTableView.separatorInset = UIEdgeInsets.zero
         
         requestAccessForContacts()
     
@@ -129,7 +131,7 @@ extension ContactsViewController: UITableViewDataSource {
         guard let contact = contacts[safe: indexPath.row] else {
             return UITableViewCell()
         }
-        
+        cell.layoutMargins = UIEdgeInsets.zero
         cell.set(contact)
         
         return cell
