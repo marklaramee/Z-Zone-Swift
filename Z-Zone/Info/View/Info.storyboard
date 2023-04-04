@@ -19,11 +19,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lA-1l-sps">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-ts-3j9">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-ts-3j9" userLabel="Outer View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="125.33333333333333"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q11-To-mBl">
-                                                <rect key="frame" x="24" y="60" width="345" height="752"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q11-To-mBl" userLabel="Inner View">
+                                                <rect key="frame" x="24" y="0.0" width="345" height="85.333333333333329"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lua-pB-bVp">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
@@ -37,19 +37,29 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-ab-erx">
+                                                        <rect key="frame" x="0.0" y="65" width="345" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="lua-pB-bVp" firstAttribute="leading" secondItem="Q11-To-mBl" secondAttribute="leading" id="Hri-ZX-kXC"/>
+                                                    <constraint firstItem="Pbo-ab-erx" firstAttribute="leading" secondItem="Q11-To-mBl" secondAttribute="leading" id="K1v-qg-wsS"/>
                                                     <constraint firstItem="lua-pB-bVp" firstAttribute="top" secondItem="Q11-To-mBl" secondAttribute="top" id="N9y-Fl-UA6"/>
                                                     <constraint firstAttribute="trailing" secondItem="lua-pB-bVp" secondAttribute="trailing" id="Pff-FV-9bu"/>
+                                                    <constraint firstItem="Pbo-ab-erx" firstAttribute="top" secondItem="lua-pB-bVp" secondAttribute="bottom" constant="24" id="T3D-kx-RzN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Pbo-ab-erx" secondAttribute="trailing" id="xWV-jS-jik"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Pbo-ab-erx" secondAttribute="bottom" id="ygV-Bp-JIb"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Q11-To-mBl" secondAttribute="trailing" constant="24" id="Lhh-NN-0rf"/>
-                                            <constraint firstItem="Q11-To-mBl" firstAttribute="top" secondItem="Tf6-ts-3j9" secondAttribute="top" constant="60" id="bih-nB-JCy"/>
+                                            <constraint firstItem="Q11-To-mBl" firstAttribute="top" secondItem="Tf6-ts-3j9" secondAttribute="top" id="bih-nB-JCy"/>
                                             <constraint firstItem="Q11-To-mBl" firstAttribute="leading" secondItem="Tf6-ts-3j9" secondAttribute="leading" constant="24" id="dD2-8h-Si8"/>
                                             <constraint firstAttribute="bottom" secondItem="Q11-To-mBl" secondAttribute="bottom" constant="40" id="xmv-9k-eZS"/>
                                         </constraints>
@@ -59,7 +69,6 @@
                                     <constraint firstItem="Tf6-ts-3j9" firstAttribute="bottom" secondItem="s1R-PO-GbK" secondAttribute="bottom" id="2nU-0k-9W5"/>
                                     <constraint firstItem="Tf6-ts-3j9" firstAttribute="trailing" secondItem="s1R-PO-GbK" secondAttribute="trailing" id="AvU-Xa-YZ3"/>
                                     <constraint firstItem="Tf6-ts-3j9" firstAttribute="leading" secondItem="s1R-PO-GbK" secondAttribute="leading" id="Dwq-21-tAH"/>
-                                    <constraint firstItem="Tf6-ts-3j9" firstAttribute="height" secondItem="TQ2-RD-M3Y" secondAttribute="height" priority="750" id="S2u-sD-Z1A"/>
                                     <constraint firstItem="Tf6-ts-3j9" firstAttribute="width" secondItem="TQ2-RD-M3Y" secondAttribute="width" id="oAw-Gb-hNX"/>
                                     <constraint firstItem="Tf6-ts-3j9" firstAttribute="top" secondItem="s1R-PO-GbK" secondAttribute="top" id="shP-e0-yiS"/>
                                 </constraints>
@@ -78,6 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vgr-KR-QBl"/>
                     <connections>
+                        <outlet property="bodyLabel" destination="Pbo-ab-erx" id="blD-XU-1vb"/>
                         <outlet property="headerLabel" destination="lua-pB-bVp" id="vz9-yq-szx"/>
                     </connections>
                 </viewController>
