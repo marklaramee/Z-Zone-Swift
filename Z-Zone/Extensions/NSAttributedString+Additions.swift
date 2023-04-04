@@ -22,23 +22,18 @@ extension NSAttributedString {
         // let a11yFontSize = AccessibilityUtil.shared.maxFontSize(size)
         
         let font = UIFont(zStyle: style, size: size)
-        let fontColor = color // TODO: remove?
         let titleString = isAllCaps ? zString.uppercased() : zString
         var attributes: [NSAttributedString.Key: Any] = [
             .font: font,
-            .foregroundColor: fontColor
+            .foregroundColor: color
         ]
         
         let style = NSMutableParagraphStyle()
-        var addParagraphStyle = false
         if let alignment = align {
             style.alignment = alignment
-            addParagraphStyle = true // TODO: refactor
-        }
-        if addParagraphStyle {
             attributes[.paragraphStyle] = style
         }
-        
+ 
         self.init(string: titleString, attributes: attributes)
     }
     
