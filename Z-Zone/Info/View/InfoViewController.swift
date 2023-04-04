@@ -11,6 +11,9 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    @IBOutlet weak var headerLabel: UILabel!
+    
+    
     static func newInstance() -> InfoViewController {
         let viewController = buildFromStoryboard("Info") as InfoViewController
         return viewController
@@ -27,18 +30,8 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let headerText = "Z-Zone"
+        let headerString = NSMutableAttributedString(zString: headerText, size: 36, style: .extraBold, color: UIColor.ZZone.purple, align: .center)
+        headerLabel.attributedText = headerString
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
