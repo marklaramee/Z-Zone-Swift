@@ -21,6 +21,11 @@ extension UIFont {
         case almaraiRegular = "Almarai-Regular"
         case almaraiBold = "Almarai-Bold"
         case almaraiExtraBold = "Almarai-ExtraBold"
+        case poppinsLight = "Poppins-Light"
+        case poppinsMedium = "Poppins-Medium"
+        case poppinsRegular = "Poppins-Regular"
+        case poppinsSemiBold = "Poppins-SemiBold"
+        case poppinsBlack = "Poppins-Black"
         case titan = "TitanOne"
     }
 }

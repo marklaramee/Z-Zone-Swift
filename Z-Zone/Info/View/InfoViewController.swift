@@ -46,7 +46,7 @@ class InfoViewController: UIViewController {
         let headerString = NSMutableAttributedString(zString: headerText, size: 36, style: .titan, color: UIColor.ZZone.purple, align: .center)
         headerLabel.attributedText = headerString
         
-        let bodyString = NSMutableAttributedString(zString: bodyText, size: 18, style: .almaraiRegular)
+        let bodyString = NSMutableAttributedString(zString: bodyText, size: 16, style: .poppinsRegular)
         bodyLabel.attributedText = bodyString
     }
 }
