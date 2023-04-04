@@ -24,7 +24,6 @@ extension String {
             return self
         }
         var result = self
-        // TODO: change to 0?
         let index = result.index(result.startIndex, offsetBy: remove.count)
         result.removeSubrange(result.startIndex..<index)
         return result

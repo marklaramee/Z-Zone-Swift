@@ -117,7 +117,7 @@ final class ContactsViewModelTests: XCTestCase {
         }
     }
     
-    // TODO: possibly delete or change this. Not sure it tests anything
+    // TODO: possibly delete or change this. Not sure it tests anything.
     func testLeaveZone_doesNotUpdate() throws {
         testClient.generateContacts(normal: 1, zone: 0)
         let validation: TestData = testClient.testData[0]
