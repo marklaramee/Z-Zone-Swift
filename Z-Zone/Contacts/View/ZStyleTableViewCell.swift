@@ -25,7 +25,7 @@ class ZStyleTableViewCell: UITableViewCell {
     }
     
     func set(_ contact: ContactModel) {
-        let nameString = NSMutableAttributedString(zString: contact.fullName, size: 18, style: .regular)
+        let nameString = NSMutableAttributedString(zString: contact.fullName, size: 18, style: .almaraiRegular)
         nameLabel.attributedText = nameString
         
         if contact.isZZone {

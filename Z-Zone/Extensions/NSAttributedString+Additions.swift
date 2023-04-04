@@ -12,7 +12,7 @@ extension NSAttributedString {
     convenience init(
         zString: String,
         size: CGFloat,
-        style: UIFont.ZFontStyle,
+        style: UIFont.zStyle,
         color: UIColor = UIColor.ZZone.black,
         align: NSTextAlignment? = nil,
         isAllCaps: Bool = false,

@@ -39,7 +39,7 @@ class ContactsViewController: UIViewController {
         super.viewDidLoad()
         
         let headerString = NSMutableAttributedString(
-            zString: headerText, size: 24, style: .extraBold, color: UIColor.ZZone.purple ,isAllCaps: true)
+            zString: headerText, size: 24, style: .almaraiBold, color: UIColor.ZZone.purple ,isAllCaps: true)
         headerLabel.attributedText = headerString
         
         contactsTableView.delegate = self
