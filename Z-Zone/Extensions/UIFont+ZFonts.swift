@@ -10,7 +10,7 @@ import UIKit
 
 extension UIFont {
 
-    /// creates an Almarai font of the given style
+    /// creates a font of the given style
     convenience init(zStyle: zStyle, size: CGFloat) {
         self.init(name: zStyle.rawValue, size: size)!
     }
