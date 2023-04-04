@@ -24,11 +24,11 @@
             </objects>
             <point key="canvasLocation" x="-463" y="-87"/>
         </scene>
-        <!--Item-->
+        <!--Contacts-->
         <scene sceneID="D2v-No-90y">
             <objects>
                 <navigationController storyboardIdentifier="ContactsNavigationController" id="tgJ-Et-yYZ" customClass="ContactsNavigationController" customModule="Z_Zone" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="a4e-7u-I34"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.fill" catalog="system" id="a4e-7u-I34"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BCO-99-dJ5">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -38,11 +38,11 @@
             </objects>
             <point key="canvasLocation" x="349" y="-87"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="H5I-zT-y1k">
             <objects>
                 <navigationController storyboardIdentifier="InfoNavigationController" id="Jrb-Er-lWQ" customClass="InfoNavigationController" customModule="Z_Zone" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6n9-QD-d87"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle.fill" catalog="system" id="6n9-QD-d87"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Suh-f4-C0o">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -53,4 +53,8 @@
             <point key="canvasLocation" x="-1395" y="-87"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
 </document>
