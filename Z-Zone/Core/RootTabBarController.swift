@@ -12,7 +12,11 @@ class RootTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let firstLoad: Bool = UserStorage.shared.readGlobalValue(forKey: .firstLoad) else {
+            UserStorage.shared.saveGlobalValue(forKey: .firstLoad, value: false)
+            selectedIndex = 0
+            return
+        }
         selectedIndex = 1
     }
 }

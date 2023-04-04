@@ -58,11 +58,7 @@ class UserStorage {
     }
 
     enum Key: String, CaseIterable {
-        case deviceIdentifier
-        case accessToken
-        case refreshToken
-        case tokenExpiration
-        case username
+        case firstLoad
 
         func make(for userID: String) -> String {
             return self.rawValue + "_" + userID
