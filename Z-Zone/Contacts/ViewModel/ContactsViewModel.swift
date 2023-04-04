@@ -15,7 +15,6 @@ class ContactsViewModel {
     let zZone = "zzz"
     var client: ContactsClient?
     var contactsRelay: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
-    var displayType = ContactDisplayType.rawStyle
     
     init(client: ContactsClient) {
         self.client = client
@@ -24,7 +23,7 @@ class ContactsViewModel {
     func getContacts() {
         client?.getContacts { results in
             guard let contacts = results else {
-                // TODO: error?
+                ZLogger.shared.log(level: .warn, message: "No contacts available", category: .contactsViewModel)
                 return
             }
             let cnContacts: [CNContact] = contacts
