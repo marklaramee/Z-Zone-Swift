@@ -36,6 +36,7 @@
 		25779ED429DBD7C700667A0B /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EB429DBD6B500667A0B /* Poppins-SemiBoldItalic.ttf */; };
 		25779ED529DBD7C700667A0B /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EBC29DBD6B500667A0B /* Poppins-LightItalic.ttf */; };
 		25779ED629DBD7C700667A0B /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EBA29DBD6B500667A0B /* Poppins-Medium.ttf */; };
+		25779ED829DBDA4900667A0B /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25779ED729DBDA4900667A0B /* RootTabBarController.swift */; };
 		25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377229C51A74007BA6D2 /* ZLogger.swift */; };
 		25B1377529C51B78007BA6D2 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377429C51B78007BA6D2 /* String+Additions.swift */; };
 		25B1377729C53720007BA6D2 /* CNContact+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377629C53720007BA6D2 /* CNContact+Additions.swift */; };
@@ -116,6 +117,7 @@
 		25779EC229DBD6B600667A0B /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		25779EC329DBD6B600667A0B /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		25779EC429DBD6B600667A0B /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		25779ED729DBDA4900667A0B /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		25B1377229C51A74007BA6D2 /* ZLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLogger.swift; sourceTree = "<group>"; };
 		25B1377429C51B78007BA6D2 /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		25B1377629C53720007BA6D2 /* CNContact+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNContact+Additions.swift"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				25D7B9D3297364BA00C62781 /* AppDelegate.swift */,
 				25D7B9D5297364BA00C62781 /* SceneDelegate.swift */,
 				252E472F29BAA01200AD12E8 /* Main.storyboard */,
+				25779ED729DBDA4900667A0B /* RootTabBarController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */,
 				25EFD6EE29BC687200F816B5 /* ContactModel.swift in Sources */,
 				252E473729BAA3B000AD12E8 /* InfoViewController.swift in Sources */,
+				25779ED829DBDA4900667A0B /* RootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
