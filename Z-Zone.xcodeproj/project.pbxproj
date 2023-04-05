@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2511A50129DD62BE0063B198 /* AccessibilityUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2511A50029DD62BE0063B198 /* AccessibilityUtil.swift */; };
 		252E360229C629C7006C101A /* ContactsTestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E360129C629C7006C101A /* ContactsTestClient.swift */; };
 		252E360429C63906006C101A /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E360329C63906006C101A /* RxBlocking.framework */; };
 		252E473029BAA01200AD12E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252E472F29BAA01200AD12E8 /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 /* Begin PBXFileReference section */
 		112BB4169D6E0D9B3430B28A /* Pods-Z-ZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-ZoneTests.release.xcconfig"; path = "Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests.release.xcconfig"; sourceTree = "<group>"; };
 		246BF475B9E78FA7ECFAB39A /* Pods-Z-Zone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-Zone.debug.xcconfig"; path = "Target Support Files/Pods-Z-Zone/Pods-Z-Zone.debug.xcconfig"; sourceTree = "<group>"; };
+		2511A50029DD62BE0063B198 /* AccessibilityUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityUtil.swift; sourceTree = "<group>"; };
 		252E360129C629C7006C101A /* ContactsTestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTestClient.swift; sourceTree = "<group>"; };
 		252E360329C63906006C101A /* RxBlocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		252E472F29BAA01200AD12E8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				25B1377229C51A74007BA6D2 /* ZLogger.swift */,
 				25B1377829C54804007BA6D2 /* VerticalAlignLabel.swift */,
 				25779ED929DBDAD700667A0B /* UserStorage.swift */,
+				2511A50029DD62BE0063B198 /* AccessibilityUtil.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */,
 				25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */,
 				25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */,
+				2511A50129DD62BE0063B198 /* AccessibilityUtil.swift in Sources */,
 				252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */,
 				25B1377529C51B78007BA6D2 /* String+Additions.swift in Sources */,
 				25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */,

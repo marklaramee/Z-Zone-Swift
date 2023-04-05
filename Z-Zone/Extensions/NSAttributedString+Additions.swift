@@ -18,10 +18,9 @@ extension NSAttributedString {
         isAllCaps: Bool = false,
         lineSpacing: CGFloat? = nil
     ) {
-        // TODO: replace initializer below with a11yFontSize
-        // let a11yFontSize = AccessibilityUtil.shared.maxFontSize(size)
+        let a11yFontSize = AccessibilityUtil.shared.maxFontSize(size)
         
-        let font = UIFont(zStyle: style, size: size)
+        let font = UIFont(zStyle: style, size: a11yFontSize)
         let titleString = isAllCaps ? zString.uppercased() : zString
         var attributes: [NSAttributedString.Key: Any] = [
             .font: font,
