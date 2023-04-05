@@ -61,7 +61,6 @@
 		25F7BADB29D5606C005817D4 /* Almarai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */; };
 		25F7BADC29D5606C005817D4 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */; };
 		25F7BADD29D5606C005817D4 /* Almarai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD629D5606C005817D4 /* Almarai-Bold.ttf */; };
-		25F7BADE29D5606C005817D4 /* Murecho-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */; };
 		25F7BAE029D5609A005817D4 /* UIFont+ZFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */; };
 		25F7BAE229D56693005817D4 /* UIColor+ZColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7BAE129D56693005817D4 /* UIColor+ZColors.swift */; };
 		845244BB2311DCE016D53F6B /* Pods_Z_Zone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF028D9A1629DD13BBD43AD /* Pods_Z_Zone.framework */; };
@@ -146,7 +145,6 @@
 		25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Light.ttf"; sourceTree = "<group>"; };
 		25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
 		25F7BAD629D5606C005817D4 /* Almarai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Bold.ttf"; sourceTree = "<group>"; };
-		25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Murecho-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ZFonts.swift"; sourceTree = "<group>"; };
 		25F7BAE129D56693005817D4 /* UIColor+ZColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZColors.swift"; sourceTree = "<group>"; };
 		3325166940FC62F2BCBE0979 /* Pods_Z_ZoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Z_ZoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,7 +354,6 @@
 				25F7BAD229D5606B005817D4 /* Almarai-ExtraBold.ttf */,
 				25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */,
 				25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */,
-				25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */,
 				25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */,
 				25F7BAD329D5606B005817D4 /* TitanOne-Regular.ttf */,
 			);
@@ -517,7 +514,6 @@
 				25779ED029DBD7C700667A0B /* Poppins-Italic.ttf in Resources */,
 				25F7BAD829D5606C005817D4 /* Almarai-Regular.ttf in Resources */,
 				25779EC929DBD7BC00667A0B /* Poppins-ExtraBold.ttf in Resources */,
-				25F7BADE29D5606C005817D4 /* Murecho-VariableFont_wght.ttf in Resources */,
 				25779ED229DBD7C700667A0B /* Poppins-ThinItalic.ttf in Resources */,
 				25779ED529DBD7C700667A0B /* Poppins-LightItalic.ttf in Resources */,
 				25779EC829DBD7BA00667A0B /* Poppins-BoldItalic.ttf in Resources */,
