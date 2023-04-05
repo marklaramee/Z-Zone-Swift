@@ -22,7 +22,7 @@ class InfoViewController: UIViewController {
 
     You create a Z-Zone by adding 3 z’s to the beginning of a contact’s name so they are pushed down to the end of your contacts list.
 
-    It's not hard for a couple of contacts; but, it can get tedious if you have many contacts you add to or remove from your Z-Zone. The Z-Zone app makes this easy.
+    It's not hard for a couple of contacts; but, it can get tedious if you have many contacts to add or remove from your Z-Zone. The Z-Zone app makes this easy.
     
     Simply go to the contacts tab and click a contact to move it in or out of your Z-Zone. A contact in your Z-Zone will appear with a purple “Z” background. When you leave the app and go to your phone’s contacts, you’ll see that all of your Z-Zone contacts are now safely tucked away at the bottom of the list.
     """

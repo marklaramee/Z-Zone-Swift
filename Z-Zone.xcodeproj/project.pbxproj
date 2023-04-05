@@ -44,7 +44,6 @@
 		25B1377929C54804007BA6D2 /* VerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377829C54804007BA6D2 /* VerticalAlignLabel.swift */; };
 		25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D3297364BA00C62781 /* AppDelegate.swift */; };
 		25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D5297364BA00C62781 /* SceneDelegate.swift */; };
-		25D7B9D8297364BA00C62781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9D7297364BA00C62781 /* ViewController.swift */; };
 		25D7B9DE297364BA00C62781 /* Z_Zone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */; };
 		25D7B9E0297364BD00C62781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25D7B9DF297364BD00C62781 /* Assets.xcassets */; };
 		25D7B9E3297364BD00C62781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */; };
@@ -127,7 +126,6 @@
 		25D7B9D0297364BA00C62781 /* Z-Zone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Z-Zone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D7B9D3297364BA00C62781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25D7B9D5297364BA00C62781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		25D7B9D7297364BA00C62781 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25D7B9DD297364BA00C62781 /* Z_Zone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Z_Zone.xcdatamodel; sourceTree = "<group>"; };
 		25D7B9DF297364BD00C62781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25D7B9E2297364BD00C62781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -301,7 +299,6 @@
 				252E473A29BAA43D00AD12E8 /* Extensions */,
 				25F7BAD029D55FA9005817D4 /* Fonts */,
 				252E473229BAA34800AD12E8 /* Info */,
-				25D7B9D7297364BA00C62781 /* ViewController.swift */,
 				25D7B9E4297364BD00C62781 /* Info.plist */,
 				25B1377129C51A0B007BA6D2 /* Utility */,
 			);
@@ -643,7 +640,6 @@
 				25D7B9DE297364BA00C62781 /* Z_Zone.xcdatamodeld in Sources */,
 				252E473C29BAA45B00AD12E8 /* UIViewController+Additions.swift in Sources */,
 				252E473929BAA40500AD12E8 /* InfoNavigationController.swift in Sources */,
-				25D7B9D8297364BA00C62781 /* ViewController.swift in Sources */,
 				25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */,
 				25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */,
 				25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */,
