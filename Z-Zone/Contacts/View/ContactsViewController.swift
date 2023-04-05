@@ -18,9 +18,11 @@ class ContactsViewController: UIViewController {
     
     @IBOutlet weak var contactsTableView: UITableView!
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     // localization
     let headerText = "Contacts"
+    let errorText = "Contacts unavailable due to permissions error."
     
     static func newInstance() -> ContactsViewController {
         let viewController = buildFromStoryboard("Contacts") as ContactsViewController
@@ -83,7 +85,10 @@ class ContactsViewController: UIViewController {
     
     // TODO: implement
     private func displayError() {
-        presentAlert(withTitle: "Error", message: "Contacts unavailable due to permissions error.")
+        contactsTableView.isHidden = true
+        errorLabel.isHidden = false
+        let errorString = NSMutableAttributedString(zString: errorText, size: 24, style: .almaraiRegular, align: .center)
+        errorLabel.attributedText = errorString
     }
     
     // TODO: implement
