@@ -15,6 +15,7 @@ class ContactsViewModel {
     let zZone = "zzz"
     var client: ContactsClient?
     var contactsRelay: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
+    var permissionsIssue = false
     
     init(client: ContactsClient) {
         self.client = client

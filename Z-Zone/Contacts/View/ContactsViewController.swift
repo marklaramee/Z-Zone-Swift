@@ -59,6 +59,13 @@ class ContactsViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if viewModel.permissionsIssue {
+            requestAccessForContacts()
+        }
+    }
+    
     private func requestAccessForContacts() {
         
         let contactStore = CNContactStore()
@@ -67,18 +74,24 @@ class ContactsViewController: UIViewController {
         case .notDetermined:
             contactStore.requestAccess(for: .contacts, completionHandler: { access, error in
                 if access {
+                    self.viewModel.permissionsIssue = false
                     self.viewModel.getContacts()
                 } else {
+                    self.viewModel.permissionsIssue = true
                     self.manualPermissionInstuctions()
                 }
             })
         case .authorized:
+            self.viewModel.permissionsIssue = false
             viewModel.getContacts()
         case .restricted:
+            self.viewModel.permissionsIssue = true
             manualPermissionInstuctions()
         case .denied:
+            self.viewModel.permissionsIssue = true
             manualPermissionInstuctions()
         @unknown default:
+            self.viewModel.permissionsIssue = true
             displayError()
         }
     }
@@ -111,12 +124,11 @@ class ContactsViewController: UIViewController {
             }
             alertController.addAction(settingsAction)
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
-                self?.displayError()
-            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default) 
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: nil)
         }
+        displayError()
     }
 }
 
