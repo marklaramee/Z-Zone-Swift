@@ -77,13 +77,13 @@ class ContactsViewController: UIViewController {
         case .denied:
             manualPermissionInstuctions()
         @unknown default:
-            handleError()
+            displayError()
         }
     }
     
     // TODO: implement
-    private func handleError() {
-        presentAlert(withTitle: "Error", message: "contacts unavilable due to permissions error.")
+    private func displayError() {
+        presentAlert(withTitle: "Error", message: "Contacts unavailable due to permissions error.")
     }
     
     // TODO: implement
@@ -105,7 +105,10 @@ class ContactsViewController: UIViewController {
                 }
             }
             alertController.addAction(settingsAction)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
+                self?.displayError()
+            }
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: nil)
         }
