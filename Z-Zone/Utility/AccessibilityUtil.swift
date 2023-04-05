@@ -8,7 +8,7 @@
 import UIKit
 
 class AccessibilityUtil {
-    let maxFontSize: CGFloat = 60
+    let maxFontSize: CGFloat = 48
     static let shared = AccessibilityUtil()
     
     var isLargeFont: Bool {
