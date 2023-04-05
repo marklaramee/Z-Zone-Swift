@@ -98,7 +98,6 @@ class ContactsViewModel {
         contactsRelay.accept(contacts)
     }
     
-    // TODO: fix this to use the model names unedited
     private func convertToFullName(_ contact: CNContact) -> String {
         switch (ContactsClient.shared.sortOrder) {
         case .familyName:

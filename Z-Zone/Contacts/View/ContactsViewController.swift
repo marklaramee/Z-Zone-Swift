@@ -96,7 +96,6 @@ class ContactsViewController: UIViewController {
         }
     }
     
-    // TODO: implement
     private func displayError() {
         contactsTableView.isHidden = true
         errorLabel.isHidden = false
@@ -104,7 +103,6 @@ class ContactsViewController: UIViewController {
         errorLabel.attributedText = errorString
     }
     
-    // TODO: implement
     private func manualPermissionInstuctions() {
         DispatchQueue.main.async {
             let alertController = UIAlertController(
