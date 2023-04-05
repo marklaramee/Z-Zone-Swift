@@ -4,6 +4,13 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Light.ttf</string>
+		<string>Poppins-Bold</string>
+		<string>TitanOne-Regular.ttf</string>
+		<string>Poppins-Black.ttf</string>
 		<string>Almarai-Light.ttf</string>
 		<string>Almarai-Regular.ttf</string>
 		<string>Almarai-Bold.ttf</string>

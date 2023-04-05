@@ -22,23 +22,6 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
 
-//    /// Show a simple alert popup
-//    func presentSimplePopup(withTitle title: String, message: String, buttonText: String? = "OK", popupContentDelegate: PopupContentDelegate? = nil) {
-//        let popupVC = PopupViewController.newInstance(popupContentDelegate: popupContentDelegate)
-//        popupVC.showSimpleAlert(currentViewController: self,
-//                                withTitle: title,
-//                                message: message,
-//                                buttonText: buttonText)
-//    }
-//
-//    /// Show a custom alert popup
-//    func presentCustomPopup(popupContentViewController: PopupContentViewController, popupContentDelegate: PopupContentDelegate? = nil) {
-//        let popupVC = PopupViewController.newInstance(popupContentDelegate: popupContentDelegate)
-//        popupContentViewController.popupViewController = popupVC
-//        popupVC.showCustomAlert(currentViewController: self,
-//                                popupContentViewController: popupContentViewController)
-//    }
-
     /// Given a Storyboard file name, atempt to create a ViewController with an identifier equivalent to it's typename.
     /// CAUTION - This will crash if the given Storyboard or identifier is not found.
     static func buildFromStoryboard<T>(_ name: String) -> T {

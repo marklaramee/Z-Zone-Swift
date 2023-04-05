@@ -10,22 +10,22 @@ import UIKit
 
 extension UIFont {
 
-    /// creates an Almarai font of the given style
-    convenience init(zStyle: ZFontStyle, size: CGFloat) {
-        let nnn = zStyle.fontName
-        let ooo = nnn
-        self.init(name: zStyle.fontName, size: size)!
+    /// creates a font of the given style
+    convenience init(zStyle: zStyle, size: CGFloat) {
+        self.init(name: zStyle.rawValue, size: size)!
     }
 
     /// The available font weights
-    enum ZFontStyle: String {
-        case light
-        case regular
-        case bold
-        case extraBold
-        
-        var fontName: String {
-            return "Almarai-\(self.rawValue.capitalized)"
-        }
+    enum zStyle: String {
+        case almaraiLight = "Almarai-Light"
+        case almaraiRegular = "Almarai-Regular"
+        case almaraiBold = "Almarai-Bold"
+        case almaraiExtraBold = "Almarai-ExtraBold"
+        case poppinsLight = "Poppins-Light"
+        case poppinsMedium = "Poppins-Medium"
+        case poppinsRegular = "Poppins-Regular"
+        case poppinsSemiBold = "Poppins-SemiBold"
+        case poppinsBlack = "Poppins-Black"
+        case titan = "TitanOne"
     }
 }
