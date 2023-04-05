@@ -17,6 +17,7 @@ class ContactsClient {
     // TODO: convert to async
     // https://developer.apple.com/videos/play/wwdc2021/10194/?time=1290
     
+    // TODO: Not ideal that this is public. Look into using a protocol.
     init() {
         switch (CNContactsUserDefaults.shared().sortOrder) {
         case .familyName:
