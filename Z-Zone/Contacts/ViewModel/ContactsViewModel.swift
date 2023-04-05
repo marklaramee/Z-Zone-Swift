@@ -15,7 +15,6 @@ class ContactsViewModel {
     let zZone = "zzz"
     var client: ContactsClient?
     var contactsRelay: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
-    var displayType = ContactDisplayType.rawStyle
     
     init(client: ContactsClient) {
         self.client = client
@@ -24,7 +23,7 @@ class ContactsViewModel {
     func getContacts() {
         client?.getContacts { results in
             guard let contacts = results else {
-                // TODO: error?
+                ZLogger.shared.log(level: .warn, message: "No contacts available", category: .contactsViewModel)
                 return
             }
             let cnContacts: [CNContact] = contacts
@@ -38,7 +37,10 @@ class ContactsViewModel {
                     isZone = cnContact.givenName.hasPrefix(self.zZone)
                 }
                 
-                return ContactModel(givenName: cnContact.givenName, familyName: cnContact.familyName, fullName: self.convertToFullName(cnContact), contact: cnContact, isZZone: isZone)
+                return ContactModel(
+                    fullName: self.convertToFullName(cnContact),
+                    contact: cnContact,
+                    isZZone: isZone)
             }
             let sortedContacts = model.sorted{ $0.fullName < $1.fullName}
             self.contactsRelay.accept(sortedContacts)
@@ -95,6 +97,7 @@ class ContactsViewModel {
         contactsRelay.accept(contacts)
     }
     
+    // TODO: fix this to use the model names unedited
     private func convertToFullName(_ contact: CNContact) -> String {
         switch (ContactsClient.shared.sortOrder) {
         case .familyName:

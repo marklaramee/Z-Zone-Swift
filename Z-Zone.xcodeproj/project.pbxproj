@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252E360229C629C7006C101A /* ContactsTestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E360129C629C7006C101A /* ContactsTestClient.swift */; };
+		252E360429C63906006C101A /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E360329C63906006C101A /* RxBlocking.framework */; };
 		252E473029BAA01200AD12E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252E472F29BAA01200AD12E8 /* Main.storyboard */; };
 		252E473529BAA36A00AD12E8 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252E473429BAA36A00AD12E8 /* Info.storyboard */; };
 		252E473729BAA3B000AD12E8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E473629BAA3B000AD12E8 /* InfoViewController.swift */; };
@@ -16,6 +18,26 @@
 		252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474329BABAAF00AD12E8 /* ContactsViewController.swift */; };
 		252E474629BABAD500AD12E8 /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */; };
 		252E474929BABAFF00AD12E8 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E474829BABAFF00AD12E8 /* ContactsViewModel.swift */; };
+		25779EC529DBD7B100667A0B /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EC229DBD6B600667A0B /* Poppins-Black.ttf */; };
+		25779EC629DBD7B400667A0B /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EB529DBD6B500667A0B /* Poppins-BlackItalic.ttf */; };
+		25779EC729DBD7B700667A0B /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EBE29DBD6B500667A0B /* Poppins-Bold.ttf */; };
+		25779EC829DBD7BA00667A0B /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EB829DBD6B500667A0B /* Poppins-BoldItalic.ttf */; };
+		25779EC929DBD7BC00667A0B /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EC329DBD6B600667A0B /* Poppins-ExtraBold.ttf */; };
+		25779ECA29DBD7C000667A0B /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EC429DBD6B600667A0B /* Poppins-ExtraBoldItalic.ttf */; };
+		25779ECB29DBD7C300667A0B /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EB329DBD6B500667A0B /* Poppins-ExtraLight.ttf */; };
+		25779ECC29DBD7C700667A0B /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EC129DBD6B600667A0B /* Poppins-ExtraLightItalic.ttf */; };
+		25779ECD29DBD7C700667A0B /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EBD29DBD6B500667A0B /* Poppins-SemiBold.ttf */; };
+		25779ECE29DBD7C700667A0B /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EC029DBD6B600667A0B /* Poppins-Light.ttf */; };
+		25779ECF29DBD7C700667A0B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EB629DBD6B500667A0B /* Poppins-Regular.ttf */; };
+		25779ED029DBD7C700667A0B /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EBF29DBD6B600667A0B /* Poppins-Italic.ttf */; };
+		25779ED129DBD7C700667A0B /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EB729DBD6B500667A0B /* Poppins-Thin.ttf */; };
+		25779ED229DBD7C700667A0B /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EB929DBD6B500667A0B /* Poppins-ThinItalic.ttf */; };
+		25779ED329DBD7C700667A0B /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EBB29DBD6B500667A0B /* Poppins-MediumItalic.ttf */; };
+		25779ED429DBD7C700667A0B /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EB429DBD6B500667A0B /* Poppins-SemiBoldItalic.ttf */; };
+		25779ED529DBD7C700667A0B /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EBC29DBD6B500667A0B /* Poppins-LightItalic.ttf */; };
+		25779ED629DBD7C700667A0B /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25779EBA29DBD6B500667A0B /* Poppins-Medium.ttf */; };
+		25779ED829DBDA4900667A0B /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25779ED729DBDA4900667A0B /* RootTabBarController.swift */; };
+		25779EDA29DBDAD700667A0B /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25779ED929DBDAD700667A0B /* UserStorage.swift */; };
 		25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377229C51A74007BA6D2 /* ZLogger.swift */; };
 		25B1377529C51B78007BA6D2 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377429C51B78007BA6D2 /* String+Additions.swift */; };
 		25B1377729C53720007BA6D2 /* CNContact+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1377629C53720007BA6D2 /* CNContact+Additions.swift */; };
@@ -26,17 +48,25 @@
 		25D7B9DE297364BA00C62781 /* Z_Zone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */; };
 		25D7B9E0297364BD00C62781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25D7B9DF297364BD00C62781 /* Assets.xcassets */; };
 		25D7B9E3297364BD00C62781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */; };
-		25D7B9EE297364BD00C62781 /* Z_ZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9ED297364BD00C62781 /* Z_ZoneTests.swift */; };
+		25D7B9EE297364BD00C62781 /* ContactsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9ED297364BD00C62781 /* ContactsViewModelTests.swift */; };
 		25D7B9F8297364BD00C62781 /* Z_ZoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9F7297364BD00C62781 /* Z_ZoneUITests.swift */; };
 		25D7B9FA297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7B9F9297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift */; };
 		25EFD6EB29BC5DFA00F816B5 /* ContactsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6EA29BC5DFA00F816B5 /* ContactsClient.swift */; };
 		25EFD6EE29BC687200F816B5 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6ED29BC687200F816B5 /* ContactModel.swift */; };
 		25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */; };
-		25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */; };
 		25EFD6F429BC737500F816B5 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F329BC737500F816B5 /* Array+Additions.swift */; };
 		25EFD6F829BC77EC00F816B5 /* NSAttributedString+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */; };
-		69ABE06D9F419E544D1DBD92 /* Pods_Z_ZoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AB8BDBFDB4E7E4684CD2A8 /* Pods_Z_ZoneTests.framework */; };
-		89E6705ECDAFD5155CE6BFB8 /* Pods_Z_Zone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B249405FD37E6EAEB76EDC /* Pods_Z_Zone.framework */; };
+		25F7BAD829D5606C005817D4 /* Almarai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */; };
+		25F7BAD929D5606C005817D4 /* Almarai-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD229D5606B005817D4 /* Almarai-ExtraBold.ttf */; };
+		25F7BADA29D5606C005817D4 /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD329D5606B005817D4 /* TitanOne-Regular.ttf */; };
+		25F7BADB29D5606C005817D4 /* Almarai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */; };
+		25F7BADC29D5606C005817D4 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */; };
+		25F7BADD29D5606C005817D4 /* Almarai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD629D5606C005817D4 /* Almarai-Bold.ttf */; };
+		25F7BADE29D5606C005817D4 /* Murecho-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */; };
+		25F7BAE029D5609A005817D4 /* UIFont+ZFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */; };
+		25F7BAE229D56693005817D4 /* UIColor+ZColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7BAE129D56693005817D4 /* UIColor+ZColors.swift */; };
+		845244BB2311DCE016D53F6B /* Pods_Z_Zone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF028D9A1629DD13BBD43AD /* Pods_Z_Zone.framework */; };
+		E66D09C202A9C81C2C243F51 /* Pods_Z_ZoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3325166940FC62F2BCBE0979 /* Pods_Z_ZoneTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +87,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11B3BD8B7A755A7E16B51CC3 /* Pods-Z-ZoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-ZoneTests.debug.xcconfig"; path = "Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		112BB4169D6E0D9B3430B28A /* Pods-Z-ZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-ZoneTests.release.xcconfig"; path = "Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		246BF475B9E78FA7ECFAB39A /* Pods-Z-Zone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-Zone.debug.xcconfig"; path = "Target Support Files/Pods-Z-Zone/Pods-Z-Zone.debug.xcconfig"; sourceTree = "<group>"; };
+		252E360129C629C7006C101A /* ContactsTestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTestClient.swift; sourceTree = "<group>"; };
+		252E360329C63906006C101A /* RxBlocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		252E472F29BAA01200AD12E8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		252E473429BAA36A00AD12E8 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		252E473629BAA3B000AD12E8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +100,26 @@
 		252E474329BABAAF00AD12E8 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNavigationController.swift; sourceTree = "<group>"; };
 		252E474829BABAFF00AD12E8 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		25779EB329DBD6B500667A0B /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		25779EB429DBD6B500667A0B /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		25779EB529DBD6B500667A0B /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		25779EB629DBD6B500667A0B /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		25779EB729DBD6B500667A0B /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		25779EB829DBD6B500667A0B /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		25779EB929DBD6B500667A0B /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		25779EBA29DBD6B500667A0B /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		25779EBB29DBD6B500667A0B /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		25779EBC29DBD6B500667A0B /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		25779EBD29DBD6B500667A0B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		25779EBE29DBD6B500667A0B /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		25779EBF29DBD6B600667A0B /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		25779EC029DBD6B600667A0B /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		25779EC129DBD6B600667A0B /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		25779EC229DBD6B600667A0B /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		25779EC329DBD6B600667A0B /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		25779EC429DBD6B600667A0B /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		25779ED729DBDA4900667A0B /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		25779ED929DBDAD700667A0B /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		25B1377229C51A74007BA6D2 /* ZLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLogger.swift; sourceTree = "<group>"; };
 		25B1377429C51B78007BA6D2 /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		25B1377629C53720007BA6D2 /* CNContact+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNContact+Additions.swift"; sourceTree = "<group>"; };
@@ -80,21 +133,28 @@
 		25D7B9E2297364BD00C62781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25D7B9E4297364BD00C62781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25D7B9E9297364BD00C62781 /* Z-ZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Z-ZoneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		25D7B9ED297364BD00C62781 /* Z_ZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ZoneTests.swift; sourceTree = "<group>"; };
+		25D7B9ED297364BD00C62781 /* ContactsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModelTests.swift; sourceTree = "<group>"; };
 		25D7B9F3297364BD00C62781 /* Z-ZoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Z-ZoneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D7B9F7297364BD00C62781 /* Z_ZoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ZoneUITests.swift; sourceTree = "<group>"; };
 		25D7B9F9297364BD00C62781 /* Z_ZoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ZoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25EFD6EA29BC5DFA00F816B5 /* ContactsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsClient.swift; sourceTree = "<group>"; };
 		25EFD6ED29BC687200F816B5 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStyleTableViewCell.swift; sourceTree = "<group>"; };
-		25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawStyleTableViewCell.swift; sourceTree = "<group>"; };
 		25EFD6F329BC737500F816B5 /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 		25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Additions.swift"; sourceTree = "<group>"; };
-		2648CE18015959758A88C782 /* Pods-Z-Zone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-Zone.release.xcconfig"; path = "Target Support Files/Pods-Z-Zone/Pods-Z-Zone.release.xcconfig"; sourceTree = "<group>"; };
-		5F7766D1E74056C0BA6A3ECE /* Pods-Z-ZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-ZoneTests.release.xcconfig"; path = "Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests.release.xcconfig"; sourceTree = "<group>"; };
-		74B249405FD37E6EAEB76EDC /* Pods_Z_Zone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Z_Zone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0B722EB8BE622AF5CB3E22A /* Pods-Z-Zone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-Zone.debug.xcconfig"; path = "Target Support Files/Pods-Z-Zone/Pods-Z-Zone.debug.xcconfig"; sourceTree = "<group>"; };
-		B2AB8BDBFDB4E7E4684CD2A8 /* Pods_Z_ZoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Z_ZoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Regular.ttf"; sourceTree = "<group>"; };
+		25F7BAD229D5606B005817D4 /* Almarai-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-ExtraBold.ttf"; sourceTree = "<group>"; };
+		25F7BAD329D5606B005817D4 /* TitanOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitanOne-Regular.ttf"; sourceTree = "<group>"; };
+		25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Light.ttf"; sourceTree = "<group>"; };
+		25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
+		25F7BAD629D5606C005817D4 /* Almarai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Bold.ttf"; sourceTree = "<group>"; };
+		25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Murecho-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ZFonts.swift"; sourceTree = "<group>"; };
+		25F7BAE129D56693005817D4 /* UIColor+ZColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZColors.swift"; sourceTree = "<group>"; };
+		3325166940FC62F2BCBE0979 /* Pods_Z_ZoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Z_ZoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		369E83D0A67B05B2990866B9 /* Pods-Z-ZoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-ZoneTests.debug.xcconfig"; path = "Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CF028D9A1629DD13BBD43AD /* Pods_Z_Zone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Z_Zone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F061DFD84168D505FB19B8 /* Pods-Z-Zone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Z-Zone.release.xcconfig"; path = "Target Support Files/Pods-Z-Zone/Pods-Z-Zone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89E6705ECDAFD5155CE6BFB8 /* Pods_Z_Zone.framework in Frameworks */,
+				845244BB2311DCE016D53F6B /* Pods_Z_Zone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69ABE06D9F419E544D1DBD92 /* Pods_Z_ZoneTests.framework in Frameworks */,
+				252E360429C63906006C101A /* RxBlocking.framework in Frameworks */,
+				E66D09C202A9C81C2C243F51 /* Pods_Z_ZoneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +222,8 @@
 				25B1377429C51B78007BA6D2 /* String+Additions.swift */,
 				252E473B29BAA45B00AD12E8 /* UIViewController+Additions.swift */,
 				25B1377629C53720007BA6D2 /* CNContact+Additions.swift */,
+				25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */,
+				25F7BAE129D56693005817D4 /* UIColor+ZColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +237,7 @@
 				25D7B9D3297364BA00C62781 /* AppDelegate.swift */,
 				25D7B9D5297364BA00C62781 /* SceneDelegate.swift */,
 				252E472F29BAA01200AD12E8 /* Main.storyboard */,
+				25779ED729DBDA4900667A0B /* RootTabBarController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -185,7 +249,6 @@
 				252E474329BABAAF00AD12E8 /* ContactsViewController.swift */,
 				252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */,
 				25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */,
-				25EFD6F129BC6D8600F816B5 /* RawStyleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +266,7 @@
 			children = (
 				25B1377229C51A74007BA6D2 /* ZLogger.swift */,
 				25B1377829C54804007BA6D2 /* VerticalAlignLabel.swift */,
+				25779ED929DBDAD700667A0B /* UserStorage.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -235,6 +299,7 @@
 				252E473129BAA33E00AD12E8 /* Contacts */,
 				252E473D29BAA52900AD12E8 /* Core */,
 				252E473A29BAA43D00AD12E8 /* Extensions */,
+				25F7BAD029D55FA9005817D4 /* Fonts */,
 				252E473229BAA34800AD12E8 /* Info */,
 				25D7B9D7297364BA00C62781 /* ViewController.swift */,
 				25D7B9E4297364BD00C62781 /* Info.plist */,
@@ -246,7 +311,8 @@
 		25D7B9EC297364BD00C62781 /* Z-ZoneTests */ = {
 			isa = PBXGroup;
 			children = (
-				25D7B9ED297364BD00C62781 /* Z_ZoneTests.swift */,
+				25D7B9ED297364BD00C62781 /* ContactsViewModelTests.swift */,
+				252E360129C629C7006C101A /* ContactsTestClient.swift */,
 			);
 			path = "Z-ZoneTests";
 			sourceTree = "<group>";
@@ -268,11 +334,44 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		25F7BAD029D55FA9005817D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				25779EC229DBD6B600667A0B /* Poppins-Black.ttf */,
+				25779EB529DBD6B500667A0B /* Poppins-BlackItalic.ttf */,
+				25779EBE29DBD6B500667A0B /* Poppins-Bold.ttf */,
+				25779EB829DBD6B500667A0B /* Poppins-BoldItalic.ttf */,
+				25779EC329DBD6B600667A0B /* Poppins-ExtraBold.ttf */,
+				25779EC429DBD6B600667A0B /* Poppins-ExtraBoldItalic.ttf */,
+				25779EB329DBD6B500667A0B /* Poppins-ExtraLight.ttf */,
+				25779EC129DBD6B600667A0B /* Poppins-ExtraLightItalic.ttf */,
+				25779EBF29DBD6B600667A0B /* Poppins-Italic.ttf */,
+				25779EC029DBD6B600667A0B /* Poppins-Light.ttf */,
+				25779EBC29DBD6B500667A0B /* Poppins-LightItalic.ttf */,
+				25779EBA29DBD6B500667A0B /* Poppins-Medium.ttf */,
+				25779EBB29DBD6B500667A0B /* Poppins-MediumItalic.ttf */,
+				25779EB629DBD6B500667A0B /* Poppins-Regular.ttf */,
+				25779EBD29DBD6B500667A0B /* Poppins-SemiBold.ttf */,
+				25779EB429DBD6B500667A0B /* Poppins-SemiBoldItalic.ttf */,
+				25779EB729DBD6B500667A0B /* Poppins-Thin.ttf */,
+				25779EB929DBD6B500667A0B /* Poppins-ThinItalic.ttf */,
+				25F7BAD629D5606C005817D4 /* Almarai-Bold.ttf */,
+				25F7BAD229D5606B005817D4 /* Almarai-ExtraBold.ttf */,
+				25F7BAD429D5606B005817D4 /* Almarai-Light.ttf */,
+				25F7BAD129D5606B005817D4 /* Almarai-Regular.ttf */,
+				25F7BAD729D5606C005817D4 /* Murecho-VariableFont_wght.ttf */,
+				25F7BAD529D5606B005817D4 /* Righteous-Regular.ttf */,
+				25F7BAD329D5606B005817D4 /* TitanOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3A65D9488561052D8088DEB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74B249405FD37E6EAEB76EDC /* Pods_Z_Zone.framework */,
-				B2AB8BDBFDB4E7E4684CD2A8 /* Pods_Z_ZoneTests.framework */,
+				252E360329C63906006C101A /* RxBlocking.framework */,
+				9CF028D9A1629DD13BBD43AD /* Pods_Z_Zone.framework */,
+				3325166940FC62F2BCBE0979 /* Pods_Z_ZoneTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,10 +379,10 @@
 		5B3CD226E05C450F817203CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B0B722EB8BE622AF5CB3E22A /* Pods-Z-Zone.debug.xcconfig */,
-				2648CE18015959758A88C782 /* Pods-Z-Zone.release.xcconfig */,
-				11B3BD8B7A755A7E16B51CC3 /* Pods-Z-ZoneTests.debug.xcconfig */,
-				5F7766D1E74056C0BA6A3ECE /* Pods-Z-ZoneTests.release.xcconfig */,
+				246BF475B9E78FA7ECFAB39A /* Pods-Z-Zone.debug.xcconfig */,
+				A3F061DFD84168D505FB19B8 /* Pods-Z-Zone.release.xcconfig */,
+				369E83D0A67B05B2990866B9 /* Pods-Z-ZoneTests.debug.xcconfig */,
+				112BB4169D6E0D9B3430B28A /* Pods-Z-ZoneTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -295,11 +394,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25D7B9FD297364BD00C62781 /* Build configuration list for PBXNativeTarget "Z-Zone" */;
 			buildPhases = (
-				6ED7AFD760B94B4FFC5B803B /* [CP] Check Pods Manifest.lock */,
+				5A3537E3DBCCEACBB80532D2 /* [CP] Check Pods Manifest.lock */,
 				25D7B9CC297364BA00C62781 /* Sources */,
 				25D7B9CD297364BA00C62781 /* Frameworks */,
 				25D7B9CE297364BA00C62781 /* Resources */,
-				37E5B40C4B5B346DB0DBA430 /* [CP] Embed Pods Frameworks */,
+				34EFBD2AFFEA057F19BF1DB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,11 +413,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25D7BA00297364BD00C62781 /* Build configuration list for PBXNativeTarget "Z-ZoneTests" */;
 			buildPhases = (
-				E4B0AFCFCE82BD67CB2176A2 /* [CP] Check Pods Manifest.lock */,
+				2B7F44113D49E79EAD201B45 /* [CP] Check Pods Manifest.lock */,
 				25D7B9E5297364BD00C62781 /* Sources */,
 				25D7B9E6297364BD00C62781 /* Frameworks */,
 				25D7B9E7297364BD00C62781 /* Resources */,
-				30BC0313957E7608982DAE6C /* [CP] Embed Pods Frameworks */,
+				1D35C60E5CB451C26FC2C7DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -397,10 +496,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				252E473029BAA01200AD12E8 /* Main.storyboard in Resources */,
+				25F7BADA29D5606C005817D4 /* TitanOne-Regular.ttf in Resources */,
+				25F7BADC29D5606C005817D4 /* Righteous-Regular.ttf in Resources */,
+				25779EC529DBD7B100667A0B /* Poppins-Black.ttf in Resources */,
+				25F7BAD929D5606C005817D4 /* Almarai-ExtraBold.ttf in Resources */,
 				25D7B9E3297364BD00C62781 /* LaunchScreen.storyboard in Resources */,
+				25F7BADD29D5606C005817D4 /* Almarai-Bold.ttf in Resources */,
+				25779ED329DBD7C700667A0B /* Poppins-MediumItalic.ttf in Resources */,
+				25779EC729DBD7B700667A0B /* Poppins-Bold.ttf in Resources */,
+				25779ED629DBD7C700667A0B /* Poppins-Medium.ttf in Resources */,
+				25F7BADB29D5606C005817D4 /* Almarai-Light.ttf in Resources */,
+				25779ECE29DBD7C700667A0B /* Poppins-Light.ttf in Resources */,
+				25779EC629DBD7B400667A0B /* Poppins-BlackItalic.ttf in Resources */,
 				252E474229BABA9800AD12E8 /* Contacts.storyboard in Resources */,
 				252E473529BAA36A00AD12E8 /* Info.storyboard in Resources */,
+				25779ECC29DBD7C700667A0B /* Poppins-ExtraLightItalic.ttf in Resources */,
+				25779ED129DBD7C700667A0B /* Poppins-Thin.ttf in Resources */,
+				25779ECA29DBD7C000667A0B /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				25779ED429DBD7C700667A0B /* Poppins-SemiBoldItalic.ttf in Resources */,
 				25D7B9E0297364BD00C62781 /* Assets.xcassets in Resources */,
+				25779ECD29DBD7C700667A0B /* Poppins-SemiBold.ttf in Resources */,
+				25779ECB29DBD7C300667A0B /* Poppins-ExtraLight.ttf in Resources */,
+				25779ED029DBD7C700667A0B /* Poppins-Italic.ttf in Resources */,
+				25F7BAD829D5606C005817D4 /* Almarai-Regular.ttf in Resources */,
+				25779EC929DBD7BC00667A0B /* Poppins-ExtraBold.ttf in Resources */,
+				25F7BADE29D5606C005817D4 /* Murecho-VariableFont_wght.ttf in Resources */,
+				25779ED229DBD7C700667A0B /* Poppins-ThinItalic.ttf in Resources */,
+				25779ED529DBD7C700667A0B /* Poppins-LightItalic.ttf in Resources */,
+				25779EC829DBD7BA00667A0B /* Poppins-BoldItalic.ttf in Resources */,
+				25779ECF29DBD7C700667A0B /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +545,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		30BC0313957E7608982DAE6C /* [CP] Embed Pods Frameworks */ = {
+		1D35C60E5CB451C26FC2C7DA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -438,46 +562,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Z-ZoneTests/Pods-Z-ZoneTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		37E5B40C4B5B346DB0DBA430 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Z-Zone/Pods-Z-Zone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Z-Zone/Pods-Z-Zone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Z-Zone/Pods-Z-Zone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6ED7AFD760B94B4FFC5B803B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Z-Zone-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E4B0AFCFCE82BD67CB2176A2 /* [CP] Check Pods Manifest.lock */ = {
+		2B7F44113D49E79EAD201B45 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,6 +584,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		34EFBD2AFFEA057F19BF1DB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Z-Zone/Pods-Z-Zone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Z-Zone/Pods-Z-Zone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Z-Zone/Pods-Z-Zone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A3537E3DBCCEACBB80532D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Z-Zone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -512,13 +636,15 @@
 				25EFD6EB29BC5DFA00F816B5 /* ContactsClient.swift in Sources */,
 				252E474629BABAD500AD12E8 /* ContactsNavigationController.swift in Sources */,
 				252E474929BABAFF00AD12E8 /* ContactsViewModel.swift in Sources */,
+				25F7BAE229D56693005817D4 /* UIColor+ZColors.swift in Sources */,
+				25F7BAE029D5609A005817D4 /* UIFont+ZFonts.swift in Sources */,
 				25B1377729C53720007BA6D2 /* CNContact+Additions.swift in Sources */,
+				25779EDA29DBDAD700667A0B /* UserStorage.swift in Sources */,
 				25D7B9DE297364BA00C62781 /* Z_Zone.xcdatamodeld in Sources */,
 				252E473C29BAA45B00AD12E8 /* UIViewController+Additions.swift in Sources */,
 				252E473929BAA40500AD12E8 /* InfoNavigationController.swift in Sources */,
 				25D7B9D8297364BA00C62781 /* ViewController.swift in Sources */,
 				25EFD6F029BC6D6C00F816B5 /* ZStyleTableViewCell.swift in Sources */,
-				25EFD6F229BC6D8600F816B5 /* RawStyleTableViewCell.swift in Sources */,
 				25D7B9D4297364BA00C62781 /* AppDelegate.swift in Sources */,
 				25B1377329C51A74007BA6D2 /* ZLogger.swift in Sources */,
 				252E474429BABAAF00AD12E8 /* ContactsViewController.swift in Sources */,
@@ -526,6 +652,7 @@
 				25D7B9D6297364BA00C62781 /* SceneDelegate.swift in Sources */,
 				25EFD6EE29BC687200F816B5 /* ContactModel.swift in Sources */,
 				252E473729BAA3B000AD12E8 /* InfoViewController.swift in Sources */,
+				25779ED829DBDA4900667A0B /* RootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +660,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25D7B9EE297364BD00C62781 /* Z_ZoneTests.swift in Sources */,
+				25D7B9EE297364BD00C62781 /* ContactsViewModelTests.swift in Sources */,
+				252E360229C629C7006C101A /* ContactsTestClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,7 +817,7 @@
 		};
 		25D7B9FE297364BD00C62781 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0B722EB8BE622AF5CB3E22A /* Pods-Z-Zone.debug.xcconfig */;
+			baseConfigurationReference = 246BF475B9E78FA7ECFAB39A /* Pods-Z-Zone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -698,6 +826,8 @@
 				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Z-Zone/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Z-Zone";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -718,7 +848,7 @@
 		};
 		25D7B9FF297364BD00C62781 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2648CE18015959758A88C782 /* Pods-Z-Zone.release.xcconfig */;
+			baseConfigurationReference = A3F061DFD84168D505FB19B8 /* Pods-Z-Zone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -727,6 +857,8 @@
 				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Z-Zone/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Z-Zone";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -747,11 +879,12 @@
 		};
 		25D7BA01297364BD00C62781 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11B3BD8B7A755A7E16B51CC3 /* Pods-Z-ZoneTests.debug.xcconfig */;
+			baseConfigurationReference = 369E83D0A67B05B2990866B9 /* Pods-Z-ZoneTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -766,11 +899,12 @@
 		};
 		25D7BA02297364BD00C62781 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F7766D1E74056C0BA6A3ECE /* Pods-Z-ZoneTests.release.xcconfig */;
+			baseConfigurationReference = 112BB4169D6E0D9B3430B28A /* Pods-Z-ZoneTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -789,6 +923,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marklaramee.Z-ZoneUITests";
@@ -806,6 +941,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marklaramee.Z-ZoneUITests";

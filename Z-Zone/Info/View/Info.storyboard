@@ -16,42 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KS4-Go-A3N">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lA-1l-sps">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGm-SU-nyH" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-ts-3j9" userLabel="Outer View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="125.33333333333333"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJQ-nl-z04" userLabel="Containing View">
-                                                <rect key="frame" x="16" y="32" width="361" height="600"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q11-To-mBl" userLabel="Inner View">
+                                                <rect key="frame" x="24" y="0.0" width="345" height="85.333333333333329"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Z-Zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-Jo-9sl">
-                                                        <rect key="frame" x="0.0" y="35" width="361" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lua-pB-bVp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Z-Zone">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="37"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How It Works" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-s7-BeM">
-                                                        <rect key="frame" x="16" y="72" width="329" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBY-BL-4xY" userLabel="FAQ View" customClass="VerticalAlignLabel" customModule="Z_Zone" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="160" width="361" height="400"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="400" id="yv4-7u-UZ2"/>
-                                                        </constraints>
-                                                        <mutableString key="text">Do you have numbers in your phone that you can’t delete; but,never want to accidentally call? Like your boss or an ex? 
-
-You need a Z-Zone. 
-
-You create a Z-Zone by adding 3 z’s to the beginning of a contact’s name so they are pushed down to the end of your contacts list.
-
-When I found out about this I had dozens of contacts to move there.  However, it was a very tedious process. 
-
-The Z-Zone app makes it easy to add and remove contacts from your Z-Zone. Simply go to the contacts screen and click a contact to move it in or out of your Z-Zone. A contact in your Z-Zone will appear with a purple “Z” background. When you leave the app and go to your phone’s contacts, you’ll see that all of your Z-Zone contacts are now safely tucked away at the bottom of the list.
-</mutableString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-ab-erx">
+                                                        <rect key="frame" x="0.0" y="65" width="345" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -59,54 +46,50 @@ The Z-Zone app makes it easy to add and remove contacts from your Z-Zone. Simply
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="dBY-BL-4xY" secondAttribute="bottom" constant="40" id="0o5-QN-ind"/>
-                                                    <constraint firstAttribute="height" constant="600" id="1YZ-4Q-4hB"/>
-                                                    <constraint firstItem="bGh-Jo-9sl" firstAttribute="top" secondItem="wJQ-nl-z04" secondAttribute="top" constant="35" id="2yV-dA-i7a"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lbw-s7-BeM" secondAttribute="trailing" constant="16" id="3Iv-Ay-7W8"/>
-                                                    <constraint firstItem="lbw-s7-BeM" firstAttribute="leading" secondItem="wJQ-nl-z04" secondAttribute="leading" constant="16" id="Gkw-Xx-KSr"/>
-                                                    <constraint firstItem="dBY-BL-4xY" firstAttribute="top" secondItem="lbw-s7-BeM" secondAttribute="bottom" constant="16" id="Hqb-Hi-qYY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="bGh-Jo-9sl" secondAttribute="trailing" id="XrX-BH-IIr"/>
-                                                    <constraint firstItem="lbw-s7-BeM" firstAttribute="top" secondItem="bGh-Jo-9sl" secondAttribute="bottom" constant="16" id="eZE-Fa-eUR"/>
-                                                    <constraint firstItem="bGh-Jo-9sl" firstAttribute="leading" secondItem="wJQ-nl-z04" secondAttribute="leading" id="lHX-of-0YP"/>
-                                                    <constraint firstItem="dBY-BL-4xY" firstAttribute="leading" secondItem="wJQ-nl-z04" secondAttribute="leading" id="mYV-xq-v6r"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dBY-BL-4xY" secondAttribute="trailing" id="vrM-dS-Q2a"/>
+                                                    <constraint firstItem="lua-pB-bVp" firstAttribute="leading" secondItem="Q11-To-mBl" secondAttribute="leading" id="Hri-ZX-kXC"/>
+                                                    <constraint firstItem="Pbo-ab-erx" firstAttribute="leading" secondItem="Q11-To-mBl" secondAttribute="leading" id="K1v-qg-wsS"/>
+                                                    <constraint firstItem="lua-pB-bVp" firstAttribute="top" secondItem="Q11-To-mBl" secondAttribute="top" id="N9y-Fl-UA6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lua-pB-bVp" secondAttribute="trailing" id="Pff-FV-9bu"/>
+                                                    <constraint firstItem="Pbo-ab-erx" firstAttribute="top" secondItem="lua-pB-bVp" secondAttribute="bottom" constant="24" id="T3D-kx-RzN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Pbo-ab-erx" secondAttribute="trailing" id="xWV-jS-jik"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Pbo-ab-erx" secondAttribute="bottom" id="ygV-Bp-JIb"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="wJQ-nl-z04" firstAttribute="top" secondItem="TGm-SU-nyH" secondAttribute="top" constant="32" id="5zG-Ld-65t"/>
-                                            <constraint firstAttribute="height" constant="852" id="RVN-0y-Vg6"/>
-                                            <constraint firstItem="wJQ-nl-z04" firstAttribute="leading" secondItem="TGm-SU-nyH" secondAttribute="leading" constant="16" id="am6-DJ-uqf"/>
-                                            <constraint firstAttribute="trailing" secondItem="wJQ-nl-z04" secondAttribute="trailing" constant="16" id="gqw-fK-E7y"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q11-To-mBl" secondAttribute="trailing" constant="24" id="Lhh-NN-0rf"/>
+                                            <constraint firstItem="Q11-To-mBl" firstAttribute="top" secondItem="Tf6-ts-3j9" secondAttribute="top" id="bih-nB-JCy"/>
+                                            <constraint firstItem="Q11-To-mBl" firstAttribute="leading" secondItem="Tf6-ts-3j9" secondAttribute="leading" constant="24" id="dD2-8h-Si8"/>
+                                            <constraint firstAttribute="bottom" secondItem="Q11-To-mBl" secondAttribute="bottom" constant="40" id="xmv-9k-eZS"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="TGm-SU-nyH" firstAttribute="width" secondItem="gvk-1K-tR7" secondAttribute="width" id="4yg-28-4ai"/>
-                                    <constraint firstItem="TGm-SU-nyH" firstAttribute="leading" secondItem="gvk-1K-tR7" secondAttribute="leading" id="9O2-qh-1jP"/>
-                                    <constraint firstItem="TGm-SU-nyH" firstAttribute="bottom" secondItem="Sn9-Fv-Fdf" secondAttribute="bottom" id="ENA-oA-SZO"/>
-                                    <constraint firstItem="TGm-SU-nyH" firstAttribute="top" secondItem="gvk-1K-tR7" secondAttribute="top" id="GEd-fH-ZNr"/>
-                                    <constraint firstItem="TGm-SU-nyH" firstAttribute="leading" secondItem="Sn9-Fv-Fdf" secondAttribute="leading" id="HRC-X0-F8e"/>
-                                    <constraint firstItem="TGm-SU-nyH" firstAttribute="trailing" secondItem="gvk-1K-tR7" secondAttribute="trailing" id="JZ8-AY-CEQ"/>
-                                    <constraint firstItem="TGm-SU-nyH" firstAttribute="bottom" secondItem="gvk-1K-tR7" secondAttribute="bottom" id="mK9-0O-AVs"/>
-                                    <constraint firstItem="Sn9-Fv-Fdf" firstAttribute="top" secondItem="TGm-SU-nyH" secondAttribute="top" id="pwY-wq-5zu"/>
-                                    <constraint firstItem="TGm-SU-nyH" firstAttribute="trailing" secondItem="Sn9-Fv-Fdf" secondAttribute="trailing" constant="393" id="rIT-C9-V4H"/>
+                                    <constraint firstItem="Tf6-ts-3j9" firstAttribute="bottom" secondItem="s1R-PO-GbK" secondAttribute="bottom" id="2nU-0k-9W5"/>
+                                    <constraint firstItem="Tf6-ts-3j9" firstAttribute="trailing" secondItem="s1R-PO-GbK" secondAttribute="trailing" id="AvU-Xa-YZ3"/>
+                                    <constraint firstItem="Tf6-ts-3j9" firstAttribute="leading" secondItem="s1R-PO-GbK" secondAttribute="leading" id="Dwq-21-tAH"/>
+                                    <constraint firstItem="Tf6-ts-3j9" firstAttribute="width" secondItem="TQ2-RD-M3Y" secondAttribute="width" id="oAw-Gb-hNX"/>
+                                    <constraint firstItem="Tf6-ts-3j9" firstAttribute="top" secondItem="s1R-PO-GbK" secondAttribute="top" id="shP-e0-yiS"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="Sn9-Fv-Fdf"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="gvk-1K-tR7"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="s1R-PO-GbK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="TQ2-RD-M3Y"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Fc-J1-JPZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KS4-Go-A3N" firstAttribute="trailing" secondItem="0Tr-au-K0L" secondAttribute="trailing" id="BVr-Z7-aWP"/>
-                            <constraint firstAttribute="bottom" secondItem="KS4-Go-A3N" secondAttribute="bottom" id="VZ3-9f-T0l"/>
-                            <constraint firstItem="KS4-Go-A3N" firstAttribute="top" secondItem="0Tr-au-K0L" secondAttribute="top" id="dYF-oI-NSx"/>
-                            <constraint firstItem="KS4-Go-A3N" firstAttribute="leading" secondItem="0Tr-au-K0L" secondAttribute="leading" id="fbk-x1-CFu"/>
+                            <constraint firstItem="0lA-1l-sps" firstAttribute="leading" secondItem="7Fc-J1-JPZ" secondAttribute="leading" id="5Ty-W3-CQs"/>
+                            <constraint firstItem="0lA-1l-sps" firstAttribute="top" secondItem="0Tr-au-K0L" secondAttribute="top" id="AcT-cC-HrZ"/>
+                            <constraint firstAttribute="bottom" secondItem="0lA-1l-sps" secondAttribute="bottom" id="sZR-aE-qDt"/>
+                            <constraint firstItem="0lA-1l-sps" firstAttribute="trailing" secondItem="7Fc-J1-JPZ" secondAttribute="trailing" id="tZx-SA-VFP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vgr-KR-QBl"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="Pbo-ab-erx" id="blD-XU-1vb"/>
+                        <outlet property="headerLabel" destination="lua-pB-bVp" id="vz9-yq-szx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTX-tA-f5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

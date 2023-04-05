@@ -12,24 +12,14 @@ class ZStyleTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var zImageView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func set(_ contact: ContactModel) {
-        nameLabel.text = contact.fullName
+        let nameString = NSMutableAttributedString(zString: contact.fullName, size: 18, style: .almaraiRegular)
+        nameLabel.attributedText = nameString
         
         if contact.isZZone {
-            zImageView.image = UIImage(named: "purple-temp")
+            zImageView.isHidden = false
         } else {
-            zImageView.image = nil
+            zImageView.isHidden = true
         }
     }
 

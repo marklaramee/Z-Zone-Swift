@@ -14,8 +14,13 @@ class ContactsViewController: UIViewController {
     let viewModel = ContactsViewModel(client: ContactsClient.shared)
     var contacts: [ContactModel] = []
     let disposeBag = DisposeBag()
+    let cellHeight: CGFloat = 36
     
     @IBOutlet weak var contactsTableView: UITableView!
+    @IBOutlet weak var headerLabel: UILabel!
+    
+    // localization
+    let headerText = "Contacts"
     
     static func newInstance() -> ContactsViewController {
         let viewController = buildFromStoryboard("Contacts") as ContactsViewController
@@ -33,8 +38,14 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let headerString = NSMutableAttributedString(
+            zString: headerText, size: 24, style: .almaraiBold, color: UIColor.ZZone.purple ,isAllCaps: true)
+        headerLabel.attributedText = headerString
+        
         contactsTableView.delegate = self
         contactsTableView.dataSource = self
+        contactsTableView.layoutMargins = UIEdgeInsets.zero
+        contactsTableView.separatorInset = UIEdgeInsets.zero
         
         requestAccessForContacts()
     
@@ -107,6 +118,10 @@ extension ContactsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return cellHeight
+    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ZStyleTableViewCell", for: indexPath) as? ZStyleTableViewCell else {
@@ -116,7 +131,7 @@ extension ContactsViewController: UITableViewDataSource {
         guard let contact = contacts[safe: indexPath.row] else {
             return UITableViewCell()
         }
-        
+        cell.layoutMargins = UIEdgeInsets.zero
         cell.set(contact)
         
         return cell

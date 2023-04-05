@@ -17,7 +17,7 @@ class ContactsClient {
     // TODO: convert to async
     // https://developer.apple.com/videos/play/wwdc2021/10194/?time=1290
     
-    init() {
+    private init() {
         switch (CNContactsUserDefaults.shared().sortOrder) {
         case .familyName:
             sortOrder = .familyName
