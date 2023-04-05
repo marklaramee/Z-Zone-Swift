@@ -214,12 +214,12 @@
 			isa = PBXGroup;
 			children = (
 				25EFD6F329BC737500F816B5 /* Array+Additions.swift */,
+				25B1377629C53720007BA6D2 /* CNContact+Additions.swift */,
 				25EFD6F729BC77EC00F816B5 /* NSAttributedString+Additions.swift */,
 				25B1377429C51B78007BA6D2 /* String+Additions.swift */,
-				252E473B29BAA45B00AD12E8 /* UIViewController+Additions.swift */,
-				25B1377629C53720007BA6D2 /* CNContact+Additions.swift */,
-				25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */,
 				25F7BAE129D56693005817D4 /* UIColor+ZColors.swift */,
+				25F7BADF29D5609A005817D4 /* UIFont+ZFonts.swift */,
+				252E473B29BAA45B00AD12E8 /* UIViewController+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,13 +227,13 @@
 		252E473D29BAA52900AD12E8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				25D7B9DF297364BD00C62781 /* Assets.xcassets */,
-				25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */,
-				25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */,
 				25D7B9D3297364BA00C62781 /* AppDelegate.swift */,
-				25D7B9D5297364BA00C62781 /* SceneDelegate.swift */,
+				25D7B9DF297364BD00C62781 /* Assets.xcassets */,
+				25D7B9E1297364BD00C62781 /* LaunchScreen.storyboard */,
 				252E472F29BAA01200AD12E8 /* Main.storyboard */,
 				25779ED729DBDA4900667A0B /* RootTabBarController.swift */,
+				25D7B9D5297364BA00C62781 /* SceneDelegate.swift */,
+				25D7B9DC297364BA00C62781 /* Z_Zone.xcdatamodeld */,
 			);
 			path = Core;
 			sourceTree = "<group>";
