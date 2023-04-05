@@ -18,9 +18,11 @@ class ContactsViewController: UIViewController {
     
     @IBOutlet weak var contactsTableView: UITableView!
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     // localization
     let headerText = "Contacts"
+    let errorText = "Contacts unavailable due to permissions error."
     
     static func newInstance() -> ContactsViewController {
         let viewController = buildFromStoryboard("Contacts") as ContactsViewController
@@ -57,6 +59,13 @@ class ContactsViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if viewModel.permissionsIssue {
+            requestAccessForContacts()
+        }
+    }
+    
     private func requestAccessForContacts() {
         
         let contactStore = CNContactStore()
@@ -65,30 +74,59 @@ class ContactsViewController: UIViewController {
         case .notDetermined:
             contactStore.requestAccess(for: .contacts, completionHandler: { access, error in
                 if access {
+                    self.viewModel.permissionsIssue = false
                     self.viewModel.getContacts()
                 } else {
-                    self.handleError()
+                    self.viewModel.permissionsIssue = true
+                    self.manualPermissionInstuctions()
                 }
             })
         case .authorized:
+            self.viewModel.permissionsIssue = false
             viewModel.getContacts()
         case .restricted:
+            self.viewModel.permissionsIssue = true
             manualPermissionInstuctions()
         case .denied:
+            self.viewModel.permissionsIssue = true
             manualPermissionInstuctions()
         @unknown default:
-            handleError()
+            self.viewModel.permissionsIssue = true
+            displayError()
         }
     }
     
-    // TODO: implement
-    private func handleError() {
-        print("handle error")
+    private func displayError() {
+        contactsTableView.isHidden = true
+        errorLabel.isHidden = false
+        let errorString = NSMutableAttributedString(zString: errorText, size: 24, style: .almaraiRegular, align: .center)
+        errorLabel.attributedText = errorString
     }
     
-    // TODO: implement
     private func manualPermissionInstuctions() {
-        print("manual permissions")
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(
+                title: "Contacts Permission Needed",
+                message: "Please enable contacts access in your phone's setting to use this app.",
+                preferredStyle: .alert
+            )
+
+            let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                    return
+                }
+
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    UIApplication.shared.open(settingsUrl)
+                }
+            }
+            alertController.addAction(settingsAction)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default) 
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        displayError()
     }
 }
 

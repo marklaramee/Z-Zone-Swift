@@ -15,6 +15,7 @@ class ContactsViewModel {
     let zZone = "zzz"
     var client: ContactsClient?
     var contactsRelay: BehaviorRelay<[ContactModel]> = BehaviorRelay(value: [])
+    var permissionsIssue = false
     
     init(client: ContactsClient) {
         self.client = client
@@ -97,7 +98,6 @@ class ContactsViewModel {
         contactsRelay.accept(contacts)
     }
     
-    // TODO: fix this to use the model names unedited
     private func convertToFullName(_ contact: CNContact) -> String {
         switch (ContactsClient.shared.sortOrder) {
         case .familyName:
