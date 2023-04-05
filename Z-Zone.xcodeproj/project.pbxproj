@@ -242,8 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				252E474129BABA9800AD12E8 /* Contacts.storyboard */,
-				252E474329BABAAF00AD12E8 /* ContactsViewController.swift */,
 				252E474529BABAD500AD12E8 /* ContactsNavigationController.swift */,
+				252E474329BABAAF00AD12E8 /* ContactsViewController.swift */,
 				25EFD6EF29BC6D6C00F816B5 /* ZStyleTableViewCell.swift */,
 			);
 			path = View;

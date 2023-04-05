@@ -67,7 +67,7 @@ class ContactsViewController: UIViewController {
                 if access {
                     self.viewModel.getContacts()
                 } else {
-                    self.handleError()
+                    self.manualPermissionInstuctions()
                 }
             })
         case .authorized:
@@ -83,12 +83,32 @@ class ContactsViewController: UIViewController {
     
     // TODO: implement
     private func handleError() {
-        print("handle error")
+        presentAlert(withTitle: "Error", message: "contacts unavilable due to permissions error.")
     }
     
     // TODO: implement
     private func manualPermissionInstuctions() {
-        print("manual permissions")
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(
+                title: "Contacts Permission Needed",
+                message: "Please enable contacts access in your phone's setting to use this app.",
+                preferredStyle: .alert
+            )
+
+            let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                    return
+                }
+
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    UIApplication.shared.open(settingsUrl)
+                }
+            }
+            alertController.addAction(settingsAction)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }
 
