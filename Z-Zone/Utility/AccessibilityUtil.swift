@@ -30,7 +30,7 @@ class AccessibilityUtil {
         case UIContentSizeCategory.accessibilityExtraExtraExtraLarge:
             return 3.0
         default:
-            return 1
+            return 1.0
         }
     }
     
