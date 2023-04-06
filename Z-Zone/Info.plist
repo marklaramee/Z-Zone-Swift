@@ -16,8 +16,6 @@
 		<string>Almarai-Bold.ttf</string>
 		<string>Almarai-ExtraBold.ttf</string>
 	</array>
-	<key>NSContactsUsageDescription</key>
-	<string>Access to contacts required to use this contact management app.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
