@@ -97,10 +97,12 @@ class ContactsViewController: UIViewController {
     }
     
     private func displayError() {
-        contactsTableView.isHidden = true
-        errorLabel.isHidden = false
-        let errorString = NSMutableAttributedString(zString: errorText, size: 24, style: .almaraiRegular, align: .center)
-        errorLabel.attributedText = errorString
+        DispatchQueue.main.async {
+            self.contactsTableView.isHidden = true
+            self.errorLabel.isHidden = false
+            let errorString = NSMutableAttributedString(zString: self.errorText, size: 24, style: .almaraiRegular, align: .center)
+            self.errorLabel.attributedText = errorString
+        }
     }
     
     private func manualPermissionInstuctions() {
